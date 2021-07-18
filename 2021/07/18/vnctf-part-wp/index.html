@@ -1,16 +1,16 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/images/icons/favicon-16x16.png?v=2.6.2" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon-32x32.png?v=2.6.2" type="image/png" sizes="32x32"><meta name="description" content="VNCTF                           filpgame       这个题目是仔细解读其实是一个翻牌游戏  输入减少‘7’如果输入为’A’ascii值为10， 输入16进制数值分别存放于v1,v2中  可以看到，把输入的把数word_18301C[v1]16bit中的v2位以及左右位变化，word_18301C[v1+-1]的v2位">
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/images/icons/favicon-16x16.png?v=2.6.2" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon-32x32.png?v=2.6.2" type="image/png" sizes="32x32"><meta name="description" content="VNCTF">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vnctf part wp">
 <meta property="og:url" content="https://yimianweishi.github.io/2021/07/18/vnctf-part-wp/index.html">
 <meta property="og:site_name" content="marginal&#39;s blog">
-<meta property="og:description" content="VNCTF                           filpgame       这个题目是仔细解读其实是一个翻牌游戏  输入减少‘7’如果输入为’A’ascii值为10， 输入16进制数值分别存放于v1,v2中  可以看到，把输入的把数word_18301C[v1]16bit中的v2位以及左右位变化，word_18301C[v1+-1]的v2位">
+<meta property="og:description" content="VNCTF">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="d:/TH/ctf/VNCTF/photo/QQ截图20210318193656.png">
 <meta property="og:image" content="d:/TH/ctf/VNCTF/photo/QQ截图20210318194653.png">
 <meta property="og:image" content="d:/TH/ctf/VNCTF/photo/QQ截图20210318195919.png">
 <meta property="og:image" content="https://img.kancloud.cn/39/d0/39d01b1338da805c5297b5b51afd5392_153x37.png">
 <meta property="article:published_time" content="2021-07-18T14:16:34.000Z">
-<meta property="article:modified_time" content="2021-07-18T14:41:08.150Z">
+<meta property="article:modified_time" content="2021-07-18T14:43:49.285Z">
 <meta property="article:author" content="marginal">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="d:/TH/ctf/VNCTF/photo/QQ截图20210318193656.png"><title>vnctf part wp | marginal's blog</title><link ref="canonical" href="https://yimianweishi.github.io/2021/07/18/vnctf-part-wp/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.6.2"><script>var Stun = window.Stun || {};
@@ -40,7 +40,9 @@ var CONFIG = {
 window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.4.0"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">Home</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">Archives</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">marginal's blog</div><div class="header-banner-info__subtitle"></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">vnctf part wp</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">Created</span><span class="post-meta-item__value">2021-07-18</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">Updated</span><span class="post-meta-item__value">2021-07-18</span></span></div></header><div class="post-body">
         <h2 id="VNCTF"   >
           <a href="#VNCTF" class="heading-link"><i class="fas fa-link"></i></a><a href="#VNCTF" class="headerlink" title="VNCTF"></a>VNCTF</h2>
-      
+      <span id="more"></span>
+
+
         <h3 id="filpgame"   >
           <a href="#filpgame" class="heading-link"><i class="fas fa-link"></i></a><a href="#filpgame" class="headerlink" title="filpgame"></a>filpgame</h3>
       <p>这个题目是仔细解读其实是一个翻牌游戏</p>
