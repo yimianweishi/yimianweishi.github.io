@@ -1,13 +1,13 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/images/icons/favicon-16x16.png?v=2.6.2" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon-32x32.png?v=2.6.2" type="image/png" sizes="32x32"><meta name="description" content="paired       解包,先得到4个文件,运行app1.exe                     app1        这几个函数不用再logic.dll里面分析,动调就可以知道是设置一个有id的储存                     WinMain       1wndclass.lpfnWndProc &#x3D; (WNDPROC)WndPr">
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/images/icons/favicon-16x16.png?v=2.6.2" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon-32x32.png?v=2.6.2" type="image/png" sizes="32x32"><meta name="description" content="paired       解包,先得到4个文件,运行app1.exe">
 <meta property="og:type" content="article">
 <meta property="og:title" content="cybricsctf-paired">
 <meta property="og:url" content="https://yimianweishi.github.io/2021/07/25/cybricsctf-paired/index.html">
 <meta property="og:site_name" content="marginal&#39;s blog">
-<meta property="og:description" content="paired       解包,先得到4个文件,运行app1.exe                     app1        这几个函数不用再logic.dll里面分析,动调就可以知道是设置一个有id的储存                     WinMain       1wndclass.lpfnWndProc &#x3D; (WNDPROC)WndPr">
+<meta property="og:description" content="paired       解包,先得到4个文件,运行app1.exe">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://yimianweishi.github.io/2021/07/25/cybricsctf-paired/image-20210725145959566.png">
 <meta property="article:published_time" content="2021-07-25T06:43:48.000Z">
-<meta property="article:modified_time" content="2021-07-25T08:40:44.670Z">
+<meta property="article:modified_time" content="2021-07-25T15:58:56.060Z">
 <meta property="article:author" content="marginal">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://yimianweishi.github.io/2021/07/25/cybricsctf-paired/image-20210725145959566.png"><title>cybricsctf-paired | marginal's blog</title><link ref="canonical" href="https://yimianweishi.github.io/2021/07/25/cybricsctf-paired/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.6.2"><script>var Stun = window.Stun || {};
@@ -38,6 +38,8 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.4.0"></he
         <h2 id="paired"   >
           <a href="#paired" class="heading-link"><i class="fas fa-link"></i></a><a href="#paired" class="headerlink" title="paired"></a>paired</h2>
       <p>解包,先得到4个文件,运行app1.exe</p>
+<span id="more"></span>
+
 
         <h3 id="app1"   >
           <a href="#app1" class="heading-link"><i class="fas fa-link"></i></a><a href="#app1" class="headerlink" title="app1"></a>app1</h3>
