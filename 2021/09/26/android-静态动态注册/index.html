@@ -1,13 +1,13 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/images/icons/favicon-16x16.png?v=2.6.2" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon-32x32.png?v=2.6.2" type="image/png" sizes="32x32"><meta name="description" content="android JNI静态注册和动态注册       这几天在摸android的题目, 在XCTF里面做了一个ONLOAD来动态注册native的题目, 但是本身ida的export能够找到对应native函数名. 想找找ONLOAD注册方法和直接调用的关系, 就仔细去翻了一些相关的帖子.  这个OnLoad注册了一个名为CheckFlag的方法. wind">
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/images/icons/favicon-16x16.png?v=2.6.2" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon-32x32.png?v=2.6.2" type="image/png" sizes="32x32"><meta name="description" content="android JNI静态注册和动态注册       这几天在摸android的题目, 在XCTF里面做了一个ONLOAD来动态注册native的题目, 但是本身ida的export能够找到对应native函数名. 想找找ONLOAD注册方法和直接调用的关系, 就仔细去翻了一些相关的帖子.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="android_静态动态注册">
 <meta property="og:url" content="https://yimianweishi.github.io/2021/09/26/android-%E9%9D%99%E6%80%81%E5%8A%A8%E6%80%81%E6%B3%A8%E5%86%8C/index.html">
 <meta property="og:site_name" content="marginal&#39;s blog">
-<meta property="og:description" content="android JNI静态注册和动态注册       这几天在摸android的题目, 在XCTF里面做了一个ONLOAD来动态注册native的题目, 但是本身ida的export能够找到对应native函数名. 想找找ONLOAD注册方法和直接调用的关系, 就仔细去翻了一些相关的帖子.  这个OnLoad注册了一个名为CheckFlag的方法. wind">
+<meta property="og:description" content="android JNI静态注册和动态注册       这几天在摸android的题目, 在XCTF里面做了一个ONLOAD来动态注册native的题目, 但是本身ida的export能够找到对应native函数名. 想找找ONLOAD注册方法和直接调用的关系, 就仔细去翻了一些相关的帖子.">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://yimianweishi.github.io/android-%E9%9D%99%E6%80%81%E5%8A%A8%E6%80%81%E6%B3%A8%E5%86%8C/image-20210926113347793.png">
 <meta property="article:published_time" content="2021-09-26T03:33:20.000Z">
-<meta property="article:modified_time" content="2021-09-28T10:38:06.541Z">
+<meta property="article:modified_time" content="2021-09-28T10:40:15.286Z">
 <meta property="article:author" content="marginal">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://yimianweishi.github.io/android-%E9%9D%99%E6%80%81%E5%8A%A8%E6%80%81%E6%B3%A8%E5%86%8C/image-20210926113347793.png"><title>android_静态动态注册 | marginal's blog</title><link ref="canonical" href="https://yimianweishi.github.io/2021/09/26/android-%E9%9D%99%E6%80%81%E5%8A%A8%E6%80%81%E6%B3%A8%E5%86%8C/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.6.2"><script>var Stun = window.Stun || {};
@@ -38,6 +38,8 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.4.0"></he
         <h2 id="android-JNI静态注册和动态注册"   >
           <a href="#android-JNI静态注册和动态注册" class="heading-link"><i class="fas fa-link"></i></a><a href="#android-JNI静态注册和动态注册" class="headerlink" title="android JNI静态注册和动态注册"></a>android JNI静态注册和动态注册</h2>
       <p>这几天在摸android的题目, 在XCTF里面做了一个ONLOAD来动态注册native的题目, 但是本身ida的export能够找到对应native函数名. 想找找ONLOAD注册方法和直接调用的关系, 就仔细去翻了一些相关的帖子.</p>
+<span id="more"></span>
+
 <p><img src="/android-%E9%9D%99%E6%80%81%E5%8A%A8%E6%80%81%E6%B3%A8%E5%86%8C/image-20210926113347793.png" alt="image-20210926113347793"></p>
 <p>这个OnLoad注册了一个名为CheckFlag的方法.</p>
 <p>windows的exe在调用DLL的时候是通过IAT, 而IAT的填充是PE装载器调用GetProAddress()查找DLL的EAT来实现.</p>
