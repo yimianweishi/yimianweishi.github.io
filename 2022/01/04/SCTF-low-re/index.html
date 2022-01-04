@@ -1,12 +1,12 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/images/icons/favicon-16x16.png?v=2.6.2" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon-32x32.png?v=2.6.2" type="image/png" sizes="32x32"><meta name="description" content="SCTF low_re                           前言       这个题其实算是逆向题, 考虑到这个题不是常规逆向思路, 并且有点谜语, 所以我把这个题放misc里面了.   出题人比较菜, 如果给师傅们造成了不好的体验, 轻点骂, orz. 这个题目的预期解是通过pintool之类的插桩工具进行指令计数来进行爆破, 但是我也看到">
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/images/icons/favicon-16x16.png?v=2.6.2" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon-32x32.png?v=2.6.2" type="image/png" sizes="32x32"><meta name="description" content="SCTF low_re">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SCTF low_re">
 <meta property="og:url" content="https://yimianweishi.github.io/2022/01/04/SCTF-low-re/index.html">
 <meta property="og:site_name" content="marginal&#39;s blog">
-<meta property="og:description" content="SCTF low_re                           前言       这个题其实算是逆向题, 考虑到这个题不是常规逆向思路, 并且有点谜语, 所以我把这个题放misc里面了.   出题人比较菜, 如果给师傅们造成了不好的体验, 轻点骂, orz. 这个题目的预期解是通过pintool之类的插桩工具进行指令计数来进行爆破, 但是我也看到">
+<meta property="og:description" content="SCTF low_re">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-01-04T12:10:13.000Z">
-<meta property="article:modified_time" content="2022-01-04T13:03:33.913Z">
+<meta property="article:modified_time" content="2022-01-04T13:05:16.272Z">
 <meta property="article:author" content="marginal">
 <meta name="twitter:card" content="summary"><title>SCTF low_re | marginal's blog</title><link ref="canonical" href="https://yimianweishi.github.io/2022/01/04/SCTF-low-re/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.6.2"><script>var Stun = window.Stun || {};
 var CONFIG = {
@@ -35,7 +35,9 @@ var CONFIG = {
 window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.4.0"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">Home</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">Archives</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">marginal's blog</div><div class="header-banner-info__subtitle"></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">SCTF low_re</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">Created</span><span class="post-meta-item__value">2022-01-04</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">Updated</span><span class="post-meta-item__value">2022-01-04</span></span></div></header><div class="post-body">
         <h2 id="SCTF-low-re"   >
           <a href="#SCTF-low-re" class="heading-link"><i class="fas fa-link"></i></a><a href="#SCTF-low-re" class="headerlink" title="SCTF low_re"></a>SCTF low_re</h2>
-      
+      <span id="more"></span>
+
+
         <h3 id="前言"   >
           <a href="#前言" class="heading-link"><i class="fas fa-link"></i></a><a href="#前言" class="headerlink" title="前言"></a>前言</h3>
       <p>这个题其实算是逆向题, 考虑到这个题不是常规逆向思路, 并且有点谜语, 所以我把这个题放misc里面了.  </p>
