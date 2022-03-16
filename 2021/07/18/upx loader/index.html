@@ -1,0 +1,1210 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="UPX解壳的一部分分析, marginal">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>UPX解壳的一部分分析 | marginal</title>
+    <link rel="icon" type="image/jpeg" href="/bin.jpg">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/bin.jpg" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">marginal</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/bin.jpg" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">marginal</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">UPX解壳的一部分分析</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-07-18
+                </div>
+                
+
+                
+
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    6 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="UPX-loader分析"><a href="#UPX-loader分析" class="headerlink" title="UPX loader分析"></a>UPX loader分析</h1><span id="more"></span>
+
+<h2 id="0x00-引用"><a href="#0x00-引用" class="headerlink" title="0x00 引用"></a>0x00 引用</h2><p><a target="_blank" rel="noopener" href="https://bbs.ichunqiu.com/forum.php?mod=viewthread&amp;tid=19345&amp;highlight=UPX">https://bbs.ichunqiu.com/forum.php?mod=viewthread&amp;tid=19345&amp;highlight=UPX</a></p>
+<p><a target="_blank" rel="noopener" href="https://bbs.pediy.com/thread-258222.htm#msg_header_h2_4">https://bbs.pediy.com/thread-258222.htm#msg_header_h2_4</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.chinapyg.com/thread-76768-1-1.html">https://www.chinapyg.com/thread-76768-1-1.html</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.52pojie.cn/thread-294773-1-1.html">https://www.52pojie.cn/thread-294773-1-1.html</a></p>
+<h2 id="0x01-用ida进行调试"><a href="#0x01-用ida进行调试" class="headerlink" title="0x01 用ida进行调试"></a>0x01 用ida进行调试</h2><p>先用ida打开，可以看到两个分区upx0,upx1,直接静态调试太难了，上动态调试,（UPX1:00EBB870下断点)</p>
+<h2 id="0x02-地址入栈"><a href="#0x02-地址入栈" class="headerlink" title="0x02 地址入栈"></a>0x02 地址入栈</h2><pre class="line-numbers language-none"><code class="language-none">UPX1:00EBB871 mov   esi, offset dword_EB9000  对esi edi初始化，分别装入upx1
+
+UPX1:00EBB876 lea   edi, [esi-8000h]           ，upx0地址
+
+UPX1:00EBB87C push  edi
+
+UPX1:00EBB87D or   ebp, 0FFFFFFFFh
+
+UPX1:00EBB880 jmp   short loc_EBB892
+
+UPX1:00EBB880 ;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="0x03-解码"><a href="#0x03-解码" class="headerlink" title="0x03 解码"></a>0x03 解码</h2><pre class="line-numbers language-汇编语言" data-language="汇编语言"><code class="language-汇编语言">UPX1:00EBB882 align 8
+
+UPX1:00EBB888
+
+UPX1:00EBB888 loc_EBB888:             
+
+UPX1:00EBB888 mov   al, [esi]               复制upx1到upx0
+
+UPX1:00EBB88A inc   esi
+
+UPX1:00EBB88B mov   [edi], al
+
+UPX1:00EBB88D inc   edi
+
+UPX1:00EBB88E
+
+UPX1:00EBB88E loc_EBB88E:             
+
+UPX1:00EBB88E                   
+
+UPX1:00EBB88E add   ebx, ebx               
+
+UPX1:00EBB890 jnz   short loc_EBB899       若ebx为0不跳转，循环结束 
+
+UPX1:00EBB892                              （ebx已经失效，需要重新读入）
+
+UPX1:00EBB892 loc_EBB892:             
+
+UPX1:00EBB892 mov   ebx, [esi]             读取esi地址对应内容放入ebx.
+
+UPX1:00EBB894 sub   esi, 0FFFFFFFCh        ebx控制upx1复制到upx0循环
+
+UPX1:00EBB897 adc   ebx, ebx               的进行同时esi地址加4，已经 
+
+UPX1:00EBB899                              读入的ebx不能作为内容复制到
+
+UPX1:00EBB899 loc_EBB899:                  upx0
+
+UPX1:00EBB899 jb   short loc_EBB888        联系00EBB88E的add命令来判断
+
+UPX1:00EBB89B mov   eax, 1                 upx1复制到upx0是否继续进行
+
+UPX1:00EBB8A0
+
+UPX1:00EBB8A0 loc_EBB8A0:              
+
+UPX1:00EBB8A0                   
+
+UPX1:00EBB8A0 add   ebx, ebx
+
+UPX1:00EBB8A2 jnz   short loc_EBB8AB       同00EBB890若ebx=0失效需要
+
+UPX1:00EBB8A4 mov   ebx, [esi]             重新读入
+
+UPX1:00EBB8A6 sub   esi, 0FFFFFFFCh
+
+UPX1:00EBB8A9 adc   ebx, ebx
+
+UPX1:00EBB8AB
+
+UPX1:00EBB8AB loc_EBB8AB:             
+
+UPX1:00EBB8AB adc   eax, eax
+
+UPX1:00EBB8AD add   ebx, ebx
+
+UPX1:00EBB8AF jnb   short loc_EBB8A0
+
+UPX1:00EBB8B1 jnz   short loc_EBB8BC
+
+UPX1:00EBB8B3 mov   ebx, [esi]              还是在判断ebx是否需要重新读入
+
+UPX1:00EBB8B5 sub   esi, 0FFFFFFFCh
+
+UPX1:00EBB8B8 adc   ebx, ebx
+
+UPX1:00EBB8BA jnb   short loc_EBB8A0
+
+UPX1:00EBB8BC
+
+UPX1:00EBB8BC loc_EBB8BC:             
+
+UPX1:00EBB8BC xor   ecx, ecx
+
+UPX1:00EBB8BE sub   eax, 3
+
+UPX1:00EBB8C1 jb   short loc_EBB8D0
+
+UPX1:00EBB8C3 shl   eax, 8
+
+UPX1:00EBB8C6 mov   al, [esi]             读入esi地址对应内容来
+  
+UPX1:00EBB8C8 inc   esi                   判断解密是否完成
+
+UPX1:00EBB8C9 xor   eax, 0FFFFFFFFh
+
+UPX1:00EBB8CC jz   short loc_EBB942       
+
+UPX1:00EBB8CE mov   ebp, eax              得到ebp对后面upx自复制
+
+UPX1:00EBB8D0                             产生影响（偏移量）
+
+UPX1:00EBB8D0 loc_EBB8D0:             
+
+UPX1:00EBB8D0 add   ebx, ebx
+
+UPX1:00EBB8D2 jnz   short loc_EBB8DB
+
+UPX1:00EBB8D4 mov   ebx, [esi]           读取upx1的数据到ebx
+
+UPX1:00EBB8D6 sub   esi, 0FFFFFFFCh      
+
+UPX1:00EBB8D9 adc   ebx, ebx
+
+UPX1:00EBB8DB
+
+UPX1:00EBB8DB loc_EBB8DB:             
+
+UPX1:00EBB8DB adc   ecx, ecx
+
+UPX1:00EBB8DD add   ebx, ebx
+
+UPX1:00EBB8DF jnz   short loc_EBB8E8      
+
+UPX1:00EBB8E1 mov   ebx, [esi]
+
+UPX1:00EBB8E3 sub   esi, 0FFFFFFFCh
+
+UPX1:00EBB8E6 adc   ebx, ebx
+
+UPX1:00EBB8E8
+
+UPX1:00EBB8E8 loc_EBB8E8:              
+
+UPX1:00EBB8E8 adc   ecx, ecx
+
+UPX1:00EBB8EA jnz   short loc_EBB90C
+
+UPX1:00EBB8EC inc   ecx
+
+UPX1:00EBB8ED
+
+UPX1:00EBB8ED loc_EBB8ED:              
+
+UPX1:00EBB8ED                    
+
+UPX1:00EBB8ED add   ebx, ebx                 ebx控制ecx值，
+
+UPX1:00EBB8EF jnz   short loc_EBB8F8       
+
+UPX1:00EBB8F1 mov   ebx, [esi]
+
+UPX1:00EBB8F3 sub   esi, 0FFFFFFFCh
+
+UPX1:00EBB8F6 adc   ebx, ebx
+
+UPX1:00EBB8F8
+
+UPX1:00EBB8F8 loc_EBB8F8:                  
+
+UPX1:00EBB8F8 adc   ecx, ecx                ecx翻倍加CF
+
+UPX1:00EBB8FA add   ebx, ebx                ebx判断循环是否继续
+
+UPX1:00EBB8FC jnb   short loc_EBB8ED
+
+UPX1:00EBB8FE jnz   short loc_EBB909
+
+UPX1:00EBB900 mov   ebx, [esi]
+
+UPX1:00EBB902 sub   esi, 0FFFFFFFCh
+
+UPX1:00EBB905 adc   ebx, ebx
+
+UPX1:00EBB907 jnb   short loc_EBB8ED
+
+UPX1:00EBB909
+
+UPX1:00EBB909 loc_EBB909:             
+
+UPX1:00EBB909 add   ecx, 2
+
+UPX1:00EBB90C
+
+UPX1:00EBB90C loc_EBB90C:             
+
+UPX1:00EBB90C cmp   ebp, 0FFFFF300h
+
+UPX1:00EBB912 adc   ecx, 1
+
+UPX1:00EBB915 lea   edx, [edi+ebp]         ebp为向前偏移量，upx0复制
+
+UPX1:00EBB918 cmp   ebp, 0FFFFFFFCh        内容的开始地址
+
+UPX1:00EBB91B jbe   short loc_EBB92C       判断两种不同的upx0自复制方式
+
+UPX1:00EBB91D                              ebp小于-4则用第二种            
+
+UPX1:00EBB91D loc_EBB91D:             
+
+UPX1:00EBB91D mov   al, [edx]              第一种upx0内容复制过程
+
+UPX1:00EBB91F inc   edx             
+
+UPX1:00EBB920 mov   [edi], al
+
+UPX1:00EBB922 inc   edi
+
+UPX1:00EBB923 dec   ecx                    ecx表示复制的次数，减少
+
+UPX1:00EBB924 jnz   short loc_EBB91D       为0则跳出循环
+
+UPX1:00EBB926 jmp   loc_EBB88E             向前跳转到upx1复制到upx0
+
+UPX1:00EBB926 ;                            语句的位置（先进行ebx判断）
+
+UPX1:00EBB92B align 4
+
+UPX1:00EBB92C
+
+UPX1:00EBB92C loc_EBB92C:             
+
+UPX1:00EBB92C                    
+
+UPX1:00EBB92C mov   eax, [edx]          第二种upx0内容复制过程
+ 
+UPX1:00EBB92E add   edx, 4              ecx判断是否跳出循环每次
+
+UPX1:00EBB931 mov   [edi], eax          减4减溢出了则跳出循环
+
+UPX1:00EBB933 add   edi, 4
+
+UPX1:00EBB936 sub   ecx, 4
+
+UPX1:00EBB939 ja   short loc_EBB92C      
+
+UPX1:00EBB93B add   edi, ecx            复制多了，地址前移，后面        
+                                        复制覆盖前面复制多的 
+UPX1:00EBB93D jmp   loc_EBB88E          跳回去进行upx1复制到upx0<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>这里带有0FFFFFFFCh的语句附近基本上都是读取upx1的内容到ebx，然后esi中的地址加4（读到ebx的内容不能作为upx0的内容要跳过它）0FFFFFFFFCh那一条是为了使地址加4</p>
+<h2 id="0x04-总结"><a href="#0x04-总结" class="headerlink" title="0x04 总结"></a>0x04 总结</h2><p>upx的解码方式分为两种一种是将upx1的数据复制到upx0，第二种是将upx0自复制，这种自复制有两种，区别是一次循环复制的多少，第二种的明显效率更高，但是第一种可以单字节复制更适用，通过ebp来判断偏移，可以将upx0任意内容进行复制，ebx则是用来控制upx1复制到upx0的关键，是从upx1读入再进行运算，ecx是控制自复制的关键，是loader代码运算得到（ebx运算时CF改变和控制ecx运算循环会影响ecx），最后ebx xor (异或)ffffffff判断是否跳出循环。</p>
+<p>可以看出，ebx是最关键的循环判断变量，而这个变量来源于upx1中，这应该是在加壳的时候就已经设置好位置和大小的</p>
+<p>采用将重复的数据以循环写出的方式来减少空间储存（以一个来重复写出多个，这样就只用储存一个和重复条件，达到压缩的目的）</p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">marginal</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://yimianweishi.github.io/2021/07/18/upx%20loader/">https://yimianweishi.github.io/2021/07/18/upx%20loader/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">marginal</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2021/07/18/hgame2021-reverse-part-wp/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="hgame2021 reverse part wp">
+                        
+                        <span class="card-title">hgame2021 reverse part wp</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Hgame2021
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-07-18
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            marginal
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                本篇&nbsp;<i class="far fa-dot-circle"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/07/18/upx%20loader/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="UPX解壳的一部分分析">
+                        
+                        <span class="card-title">UPX解壳的一部分分析</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            UPX loader分析
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-18
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            marginal
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2022</span>
+            
+            <span id="year">2019</span>
+            <a href="/about" target="_blank">marginal</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+
+
+    <a href="mailto:1330728738@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1330728738" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1330728738" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+	
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
