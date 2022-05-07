@@ -393,7 +393,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -416,7 +416,119 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <p>XCTF分站赛, 这次分别出了jump和simplefs两个题目, simplefs有其他师傅比我先出了, 就没有写wp了.</p>
+<span id="more"></span>
+
+<h3 id="jump"><a href="#jump" class="headerlink" title="jump"></a>jump</h3><p>通过静态分析查看, 判断函数返回值永远是0, 经过调试之后发现这里会改变程序的控制流</p>
+<p><img src="/2022/04/29/starctf/Untitled-16519315397452.png" alt="Untitled"></p>
+<p>对输入进行交叉引用, 可以发现这些地方flag相关:</p>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">sprintf(qword_4C9400, (__int64)"%c%s%c", 2LL, (const char *)flag, 3LL);  
+//..............
+off_4C9660 = sub_428A40(dword_4C613C + 1, 1LL);
+j_strcat_ifunc_0(off_4C9660, qword_4C9400 + v12 - 1LL);
+if ( v12 &gt; 1 )
+  j_strcat_ifunc_1(off_4C9660, qword_4C9400, v12 - 1);
+*(_QWORD *)(qword_4C9408 + 8LL * v12 - 8) = off_4C9660;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>这些地方其实进行了转化, 大致的逻辑为, 将输入(2flag3的形式)从开头依次取第一个字节放在最后.</p>
+<p>总计0x23次</p>
+<p>sub_40293E中判断是否结束:</p>
+<pre class="line-numbers language-none"><code class="language-none">if ( v34 &lt;= dword_4C613C )<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>结束了之后的<code>sub_401F62(qword_4C9408);</code> 对生成的0x23个字符串进行了排序, 从小到大.</p>
+<p>从<code>sub_401E48</code> 函数可以猜测到<code>sub_401F62</code> 是在排序, 自己输入数据进行验证可以证明</p>
+<p><code>sub_401E48</code> :</p>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">do
+  {
+    v2 = a1++;
+    v5 = *v2;
+    v3 = a2++;
+    v6 = *v3;
+    if ( !v5 )
+      return (unsigned int)-v6;
+  }
+  while ( v5 == v6 );
+  return v5 - (unsigned int)v6;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>密文数据生成和校验在<code>sub_402826:</code></p>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">//依次取排序之后的0x23个字符串的最后一个字符组成密文数据
+byte_4C9420[v8 - 1] = *(_BYTE *)(dword_4C613C - 1LL + *(_QWORD *)(8LL * v8 - 8 + qword_4C9408));
+//.........
+(unsigned int)sub_401DC1(byte_4C9420, &amp;flag_info, (unsigned int)dword_4C613C)// 校验语句<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>逆向脚本:</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">from sympy import true
+
+a = [2,3,
+'+',
+ '1',
+ '2',
+ '4',
+ '6',
+ '=',
+ 'B',
+ 'C',
+ 'D',
+ 'E',
+ 'F',
+ 'G',
+ 'L',
+ 'N',
+ 'R',
+ 'S',
+ 'T',
+ 'V',
+ 'Z',
+ '_',
+ 'a',
+ 'c',
+ 'j',
+ 'k',
+ 'm',
+ 'n',
+ 'p',
+ 'q',
+ 'u',
+ 'v',
+ 'w',
+ 'x']
+b = [3,'j',
+ 'm',
+ 'G',
+ 'n',
+ '_',
+ '=',
+ 'u',
+ 'a',
+ 'S',
+ 'Z',
+ 'L',
+ 'v',
+ 'N',
+ '4',
+ 'w',
+ 'F',
+ 'x',
+ 'E',
+ '6',
+ 'R',
+ '+',
+ 'p',2,
+ 'D', '2', 'q', 'V', '1', 'C', 'B', 'T', 'c', 'k']
+c = []
+d = b[a.index(3)]
+while true:
+    c.append(d)
+    d = b[a.index(d)]
+    if (d == 2):
+        break
+c.reverse()
+print(c)
+kk = "".join(c)
+print(kk)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>flag:<code>CTF{cwNG1paBu=6Vn2kxSCqm+_4LETvFRZDj}</code></p>
+
                 
             </div>
             <hr/>
@@ -538,7 +650,7 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            XCTF分站赛, 这次分别出了jump和simplefs两个题目, simplefs有其他师傅比我先出了, 就没有写wp了.
                         
                     </div>
                     <div class="publish-info">
