@@ -1,0 +1,1343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-xxxxxx-xx"></script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-xxxxxx-xx');
+    </script>
+  
+
+  <!-- Baidu Tongji -->
+  
+    <script type="text/javascript">
+      // Originial
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="It&#39;s an IT blog..."/>
+  <meta name="keyword" content="marginal&#39;s blog"/>
+  <link rel="shortcut icon" href="/img/avatar/jumpers.jpg"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css"/>
+    <link rel="stylesheet" href="/css/widget.css"/>
+    <link rel="stylesheet" href="/css/rocket.css"/>
+    <link rel="stylesheet" href="/css/signature.css"/>
+    <link rel="stylesheet" href="/css/catalog.css"/>
+    <link rel="stylesheet" href="/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+      <!-- gitalk start -->
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
+      <link rel="stylesheet" href="/css/gitalk.css"/>
+      <!-- gitalk end -->
+    
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="http://yoursite-url/cn/android抓包总结/">
+  <title>
+    
+      android抓包总结 - either thin | or die
+    
+  </title>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--dark">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'dark';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'your-community/your-room'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">marginal&#39;s blog</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">首页</a>
+          </li>
+
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
+          
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>搜索</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-post: url('');
+      --intro-header-background-image-url-page: url('/img/header_img/archive_bg2.jpg');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/archive_bg2.jpg');
+    }
+
+    header.intro-header {
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url(''); */
+      
+    }
+
+    
+  </style>
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#re-android" title="re-android">re-android</a>
+              
+            </div>
+            <h1>android抓包总结</h1>
+            <h2 class="subheading"></h2>
+            <span class="meta">
+              Posted by marginal on
+              2023-06-15
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">13</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">3.4k</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <h1>android抓包基础总结</h1>
+<p>针对常见的抓包方式以及对抗做了一个总结</p>
+<h2 id="抓包方式分类">抓包方式分类</h2>
+<ul>
+<li>
+<p>网卡抓包</p>
+<ul>
+<li>肯定能抓到, 但是是未解密的数据, 可能用来抓http比较好使一点</li>
+</ul>
+</li>
+<li>
+<p>Hook数据抓包</p>
+<ul>
+<li>如果直接hook底层api可以直接省掉逆向分析, 并且帮助逆向分析程序执行逻辑(使用frida等hook工具来打印堆栈回溯等), 但是hook出来的数据进行分析有些麻烦.</li>
+</ul>
+</li>
+<li>
+<p>代理抓包</p>
+<ul>
+<li>可以直接对https数据包进行解析, 可以很方便的进行查看与修改, 不过这也是反抓包手段的主要目标</li>
+</ul>
+</li>
+<li>
+<p>.…………</p>
+</li>
+</ul>
+<h2 id="代理抓包">代理抓包</h2>
+<h3 id="原理">原理</h3>
+<p>代理软件对于客户端app伪造成一个服务器, 对于服务器伪造成一个客户端, 然后再把对应的消息进行转发, 这样可以在正常通信的前提下, 对通信的信息了如指掌.</p>
+<p>大概就是这个样子(网上找的图):</p>
+<p><img src="image-20230627225130553.png" alt="image-20230627225130553"></p>
+<p>对于没有保护的app, 把环境配好就能抓包抓到了, 配合上逆向一倒腾, 许许多多的爬虫就出来了.所以很多app都加了各种各样的校验, 比如服务端验证客户端证书, 客户端验证服务端证书等.</p>
+<p><img src="image-20230627225154105.png" alt="image-20230627225154105"></p>
+<h3 id="客户端验证服务器证书">客户端验证服务器证书</h3>
+<p>这里就用了客户端验证服务器证书, 开发商先讲证书信息内置到app中, 当客户端请求服务器连接并收到服务器证书后, 使用内置的证书信息校验服务器证书是否合法, 如果不合法直接断开连接. 当抓包证书伪装服务器的时候返回的Burp证书肯定是不能通过校验的.</p>
+<p>客户端校验服务器失败之后, burp suite一般是没有任何内容的, 客户端直接把连接断掉了</p>
+<p><img src="image-20230627225218888.png" alt="image-20230627225218888"></p>
+<p>遇到有客户端校验服务器证书的app,可以采取一下几个方案进行绕过:</p>
+<ul>
+<li>对app进行逆向并且patch掉校验实现的地方然后重打包
+<ul>
+<li>逆向成本有点高, 对于加固和加密的APK耗时耗精力, 不过有时候不得不这样(针对框架完全是开发商自己实现的情况)</li>
+</ul>
+</li>
+<li>使用Frida对应的API进行hook
+<ul>
+<li>用到了Frida框架, 所以对root有要求, 并且容易被反调试限制. 现成的针对校验 SSL 证书的 API 的frida脚本网上一搜就有现成的, 不过针对http框架完全是开发商自己实现的情况就需要自己来写了.</li>
+</ul>
+</li>
+<li>Xposed框架+JustTrustMe进行绕过
+<ul>
+<li>JustTrustMe 一个用来禁用、绕过 SSL 证书检查的基于 Xposed 模块。JustTrustMe 也是将 APK 中所有用于校验 SSL 证书的 API 都进行了 Hook，从而绕过证书检查. 不过有动用xposed框架就可能搞成砖块.可以先在模拟器中试试. 一样需要root环境, app可能会有xposed和root检查, 不过这里不会被反调试限制.</li>
+</ul>
+</li>
+<li>VirtualApp.</li>
+<li>…………………………………………….</li>
+</ul>
+<h3 id="服务端验证客户端证书">服务端验证客户端证书</h3>
+<p><img src="image-20230627225520620.png" alt="image-20230627225520620"></p>
+<p>比起单向认证, 加上了服务器也同时需要验证客户端的证书，也就是会要求客户端提供自己的证书，如果没有通过验证，则会拒绝连接，如果通过验证，服务器获得用户的公钥. 客户端这里会内置一套公钥证书+私钥.</p>
+<p>对于服务器端验证客户端证书的绕过, 关键在于得到客户端内置的证书以及得到对应的密钥.</p>
+<p>Android本地存放的一般是bks或者p12证书文件, 私钥和公钥都在这个证书文件里面. 但是还有一个对证书解密的密钥.</p>
+<p>提取公钥证书:</p>
+<ul>
+<li>直接逆向证书发送的地方, 找到证书的来源.</li>
+<li>一般证书文件可能会放在 assets 或者 res 目录下可以直接搜索证书文件,证书文件格式后缀如：crt、cer、p12、pfx等.</li>
+<li>使用hook关键函数来从内存中还原对应的证书与私钥</li>
+</ul>
+<p>提取密钥:</p>
+<ul>
+<li>直接逆向</li>
+<li>hook关键函数来获取</li>
+</ul>
+<p>Burp在图中这里添加客户端证书:</p>
+<p><img src="image-20230627225619020.png" alt="image-20230627225619020"></p>
+<p>选择PKCS12格式(之前用openssl生成证书的时候用的就是PKCS12)并输入host, 然后选择对应的证书并且输入密码.</p>
+<h3 id="软件默认不走代理">软件默认不走代理</h3>
+<p>代理抓包的关键就是需要HTTP客户端按照要求去连接代理服务器, 一般情况下是设置的系统代理,通常http客户端都是按要求去实现的，在进行http请求前会先检查系统代理，如果有设置代理，客户端会直接使用完整uri去连接代理服务器。不同的平台通常会实现自己的的http客户端的，虽然他们都按照协议要求实现了代理功能，但是并不一定在默认情况下会直接使用系统代理。比如flutter, 或者开发商自己设置不走代理.我之前逆一个otp生成项目就是这样, 明明开了抓包软件, 而且运行起来没有任何问题, 但是就是没有抓到包. 后面折腾了我几天才知道是软件默认不走代理的原因.</p>
+<p>对于不走代理的软件, 有很多解决方法:</p>
+<ul>
+<li>可以直接逆向patch它让app强行走系统代理
+<ul>
+<li>非常麻烦, 逆向成本也较高.</li>
+<li>直接控制dns解析,修改dns的方式让客户端以为我们的代理服务器就是目标服务器.
+<ul>
+<li>原本如果在没有代理的情况下,请求的请求行实际上是不完整的url,客户端在发送报文前已经知道服务器的地址并与之建立了连接，没有必要再发送方案，主机名及端口, 这和走代理不一样, 代理服务器没有办法连接正确的服务器。因此客户端发送给代理的请求其实稍有不同，客户端会在请求行里使用完整的uri，这样代理服务器才能解析真实的服务器的地址。所以这样搞需要对应域名修改hosts, 比较难操作, 并且又涉及到dns的知识了.</li>
+</ul>
+</li>
+<li>用vpn进行流量转发, 将流量转发到代理服务器, 比如用droxy, Proxifier等软件.
+<ul>
+<li>感觉比前面的方法简单, 只需要配置一下流量转发的vpn软件就好了, 这里具体的配置我就不啰嗦了, 网上一大堆.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="反代理抓包实现">反代理抓包实现</h2>
+<h3 id="证书生成">证书生成</h3>
+<p>先用openssl生成两个证书, 分别用于客户端校验服务器与服务器校验客户端.</p>
+<p>生成客户端校验服务器证书:</p>
+<p>openssl req -newkey rsa:2048 -nodes -keyout server.key -x509 -days 365 -out server.crt</p>
+<p>生成服务器校验客户端证书:</p>
+<p>openssl x509 -req –in .csr –out .cer –signkey .key -CAcreateserial -days 3650</p>
+<p>转为p12证书, 并且设置密码:</p>
+<p>openssl pkcs12 -in client.p12 -out client.pem</p>
+<p>获取服务器公钥的sha256值, 可以用于公钥校验:</p>
+<p>openssl s_client –connect 域名:端口| openssl x509 -pubkey -noout | openssl rsa -pubin -outform der | openssl dgst -sha256 -binary | openssl enc -base64</p>
+<p>这里几点要注意:</p>
+<ul>
+<li>首先是域名校验, 需要在代码里面手动去掉, 或者在生成证书的时候加上域名.</li>
+<li>校验的时候客户端和服务器使用的证书是同一个.</li>
+<li>服务器校验客户端的时候, android本地不能直接用crt证书, 要转为p12证书.</li>
+<li>P12文件相当于是证书加私钥, 并且还有一个加密整个证书的密码.</li>
+<li>如果出现javax.net.ssl.SSLProtocolException: Read error则可能是服务器校验客户端证书错误</li>
+<li>如果出现java.security.cert.CertPathValidatorException: Trust anchor for certification path not found.则可能是客户端校验服务器证书错误.</li>
+</ul>
+<h3 id="证书固定">证书固定</h3>
+<p>Java层发送调用okhttp对服务器证书进行校验,以下是官网手动添加信任证书的示例</p>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">    InputStream openRawResource = getApplicationContext<span class="params">()</span><span class="string">.getResources</span><span class="params">()</span><span class="string">.getAssets</span><span class="params">()</span><span class="string">.open</span><span class="params">(“server.crt&quot;)</span>; </span><br><span class="line">    Certificate ca = CertificateFactory.getInstance<span class="params">(&quot;X.509&quot;)</span><span class="string">.generateCertificate</span><span class="params">(openRawResource)</span>;</span><br><span class="line">    KeyStore keyStore = KeyStore.getInstance<span class="params">(KeyStore.getDefaultType()</span>);</span><br><span class="line">    keyStore.load<span class="params">(null, null)</span>;</span><br><span class="line">    keyStore.<span class="keyword">set</span>CertificateEntry<span class="params">(&quot;ca&quot;, ca)</span>;</span><br><span class="line">    TrustManagerFactory trustManagerFactory = TrustManagerFactory.getInstance<span class="params">(TrustManagerFactory.getDefaultAlgorithm()</span>);</span><br><span class="line">     trustManagerFactory.init<span class="params">(keyStore)</span>;</span><br><span class="line">    SSLContext sslContext1 = null;</span><br><span class="line">    sslContext1 = SSLContext.getInstance<span class="params">(&quot;TLS&quot;)</span>; </span><br><span class="line">    sslContext1.init<span class="params">(null, trustManagerFactory.getTrustManagers()</span>, new SecureRandom<span class="params">()</span>);</span><br><span class="line">    OkHttpClient client1 = new OkHttpClient<span class="params">()</span>;</span><br><span class="line">    OkHttpClient pClient2 = client1.newBuilder<span class="params">()</span><span class="string">.sslSocketFactory</span><span class="params">(sslContext1.getSocketFactory()</span>, <span class="params">(X509TrustManager)</span> trustManagerFactory.getTrustManagers<span class="params">()</span>[0])<span class="string">.build</span><span class="params">()</span>;</span><br><span class="line">    Request request2 = new Request.Builder<span class="params">()</span><span class="string">.url</span><span class="params">(&quot;https://192.168.1.103:4444&quot;)</span><span class="string">.build</span><span class="params">()</span>;</span><br><span class="line">     <span class="string">//</span>….接下来就是okhttps请求</span><br></pre></td></tr></table></figure>
+<p>对公钥进行校验:</p>
+<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">CertificatePinner pinner = <span class="keyword">new</span> CertificatePinner.<span class="constructor">Builder()</span>.add(url, public_key).build<span class="literal">()</span>;</span><br><span class="line"></span><br><span class="line">OkHttpClient pClient = client.<span class="keyword">new</span><span class="constructor">Builder()</span>.certificate<span class="constructor">Pinner(<span class="params">pinner</span>)</span>.build<span class="literal">()</span>;</span><br></pre></td></tr></table></figure>
+<p>还有一种更加简单的xml实现方法, 不过也很容易被逆向找到</p>
+<p>在xml中对服务器证书进行校验:</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">domain-config</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">domain</span> <span class="attr">includeSubdomains</span>=<span class="string">&quot;true&quot;</span>&gt;</span>url<span class="tag">&lt;/<span class="name">domain</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">trust-anchors</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">certificates</span> <span class="attr">src</span>=<span class="string">&quot;@raw/.pem&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;/<span class="name">trust-anchors</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">domain-config</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>Xml中对公钥进行校验:</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">domain-config</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">domain</span> <span class="attr">includeSubdomains</span>=<span class="string">&quot;true&quot;</span>&gt;</span>url<span class="tag">&lt;/<span class="name">domain</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">pin-set</span> <span class="attr">expiration</span>=<span class="string">&quot;2099-01-01&quot;</span></span></span><br><span class="line"><span class="tag"></span></span><br><span class="line"><span class="tag">    <span class="attr">tools:ignore</span>=<span class="string">&quot;MissingBackupPin&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">pin</span> <span class="attr">digest</span>=<span class="string">&quot;SHA-256&quot;</span>&gt;</span>PublicKey<span class="tag">&lt;/<span class="name">pin</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;/<span class="name">pin-set</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">domain-config</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="服务器校验客户端证书">服务器校验客户端证书</h3>
+<p>用python来启动一个服务器:</p>
+<figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">import</span> os</span><br><span class="line"><span class="built_in">import</span> sys</span><br><span class="line"><span class="built_in">import</span> ssl</span><br><span class="line">from http.server <span class="built_in">import</span> HTTPServer, BaseHTTPRequestHandler</span><br><span class="line"><span class="comment">#.............................</span></span><br><span class="line">def main():</span><br><span class="line">    <span class="attr">server_address</span> = (<span class="string">&quot;0.0.0.0&quot;</span>, int(port))</span><br><span class="line">    <span class="attr">server</span> = HTTPServer(server_address, RequestHandler)</span><br><span class="line">    <span class="comment">#双向校验</span></span><br><span class="line">    server.<span class="attr">socket</span> = ssl.wrap_socket(server.socket, <span class="attr">certfile</span> = serverCerts, <span class="attr">server_side</span> = True,</span><br><span class="line">                               <span class="attr">keyfile</span> = serverKey,</span><br><span class="line">                               <span class="attr">cert_reqs</span> = ssl.CERT_REQUIRED,</span><br><span class="line">                               <span class="attr">ca_certs</span> = clientCerts,</span><br><span class="line">                               <span class="attr">do_handshake_on_connect</span> = False</span><br><span class="line">                               )</span><br><span class="line">    print(<span class="string">&quot;Starting server, listen at: %s:%s&quot;</span> % server_address)</span><br><span class="line">    server.serve_forever()</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> <span class="attr">__name__</span> == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
+<p>Java层发送证书的okhttp实现</p>
+<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">keyStore.load(client_input, <span class="module-access"><span class="module"><span class="identifier">KEY_STORE_PASSWORD</span>.</span></span><span class="keyword">to</span><span class="constructor">CharArray()</span>); <span class="comment">//分别为输入流和密钥</span></span><br><span class="line"></span><br><span class="line">keyManagerFactory.init(keyStore, <span class="module-access"><span class="module"><span class="identifier">KEY_STORE_PASSWORD</span>.</span></span><span class="keyword">to</span><span class="constructor">CharArray()</span>);</span><br><span class="line"></span><br><span class="line">sslContext.init(keyManagerFactory.get<span class="constructor">KeyManagers()</span>, null, <span class="keyword">new</span> <span class="constructor">SecureRandom()</span>); <span class="comment">//这里为第一个参数</span></span><br><span class="line"></span><br><span class="line">sslContext.get<span class="constructor">SocketFactory()</span>;</span><br><span class="line"></span><br><span class="line">OkHttpClient mClient = client.<span class="keyword">new</span><span class="constructor">Builder()</span>.ssl<span class="constructor">SocketFactory(Objects.<span class="params">requireNonNull</span>(ClientSSLSocketFactory.<span class="params">getSocketFactory</span>(<span class="params">getApplicationContext</span>()</span>)), <span class="module-access"><span class="module"><span class="identifier">Objects</span>.</span></span>require<span class="constructor">NonNull(<span class="params">trustManager</span>)</span>).hostname<span class="constructor">Verifier(<span class="params">new</span> HostnameVerifier()</span> &#123;</span><br><span class="line"></span><br><span class="line">  @Override</span><br><span class="line"></span><br><span class="line">  public boolean verify(String hostname, SSLSession session) &#123;</span><br><span class="line"></span><br><span class="line">    HostnameVerifier hv = <span class="module-access"><span class="module"><span class="identifier">HttpsURLConnection</span>.</span></span>get<span class="constructor">DefaultHostnameVerifier()</span>;</span><br><span class="line"></span><br><span class="line">    return hv.verify(<span class="string">&quot;www.test.com&quot;</span>, session);</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;).build<span class="literal">()</span>;</span><br></pre></td></tr></table></figure>
+<p>被重写的verify部分就是域名校验, 如果只是图一乐, 搞出来的证书没有包含域名, 那就直接把这里返回true就行, 不然会报错:</p>
+<p>javax.net.ssl.SSLPeerUnverifiedException: Hostname xxx not verified_hostname not verified</p>
+<h2 id="Hook数据抓包">Hook数据抓包</h2>
+<p>在调用okhttp进行数据传输的时候, 会调用SSL_read负责读取远程服务器发来的数据而SSL_write则负责写入主机要发送的数据到缓冲区，发送到远程服务器.而SSL_write则负责写入主机要发送的数据到缓冲区，发送到远程服务器。这里读写的数据都是明文的, 所以想办法hook到这两个函数, 也能抓到明文数据包. 不过如果不是调用的libssl.so库而是自己那套ssl库的话, 就hook不到了.</p>
+<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span> <span class="constructor">SSL_write(SSL <span class="operator">*</span><span class="params">ssl</span>, <span class="params">const</span> <span class="params">void</span> <span class="operator">*</span><span class="params">buf</span>, <span class="params">int</span> <span class="params">num</span>)</span></span><br><span class="line"></span><br><span class="line">这个buf里面就是加密之前的明文报文, num是报文长度. 对这个函数需要在调用之前进行hook.也就是hook代码写在onEnter里面</span><br><span class="line"></span><br><span class="line"><span class="built_in">int</span> <span class="constructor">SSL_read(SSL <span class="operator">*</span><span class="params">ssl</span>, <span class="params">void</span> <span class="operator">*</span><span class="params">buf</span>, <span class="params">int</span> <span class="params">num</span>)</span></span><br><span class="line"></span><br><span class="line">这个buf里面就是解密之前的秘文报文, num是报文长度. 对这个函数需要在调用之后进行hook.也就是hook代码写在onLeave里面</span><br><span class="line"></span><br><span class="line">Frida hook示例:</span><br><span class="line"></span><br><span class="line"> var sslWritePtr=<span class="module-access"><span class="module"><span class="identifier">Module</span>.</span></span>get<span class="constructor">ExportByName(<span class="string">&quot;libssl.so&quot;</span>,<span class="string">&quot;SSL_write&quot;</span>)</span>;</span><br><span class="line"></span><br><span class="line">  var sslReadPtr=<span class="module-access"><span class="module"><span class="identifier">Module</span>.</span></span>get<span class="constructor">ExportByName(<span class="string">&quot;libssl.so&quot;</span>,<span class="string">&quot;SSL_read&quot;</span>)</span>;</span><br><span class="line"></span><br><span class="line">  <span class="module-access"><span class="module"><span class="identifier">Interceptor</span>.</span></span>attach(sslWritePtr,&#123;</span><br><span class="line"></span><br><span class="line">    onEnter:<span class="keyword">function</span>(args)&#123;</span><br><span class="line"></span><br><span class="line">      var sslPtr=args<span class="literal">[<span class="number">0</span>]</span>;</span><br><span class="line"></span><br><span class="line">      var buff=args<span class="literal">[<span class="number">1</span>]</span>;</span><br><span class="line"></span><br><span class="line">      var size=args<span class="literal">[<span class="number">2</span>]</span>;</span><br><span class="line"></span><br><span class="line">      console.log(hexdump(buff,&#123;length:size.<span class="keyword">to</span><span class="constructor">Int32()</span>&#125;));</span><br><span class="line"></span><br><span class="line">    &#125;,</span><br><span class="line"></span><br><span class="line">    onLeave:<span class="keyword">function</span>(retval)&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="总结">总结</h2>
+<p>如果发生代理抓包没有抓到, 我一般是按照以下步骤进行排查:</p>
+<ol>
+<li>首先排查网络环境, 代理是不是没通网, 代理是不是没配置正确, 是否安装代理软件的证书为系统证书.
+<ul>
+<li>对应android小于7.0的版本, 系统不在信任用户CA证书, 所以需要安装系统证书(需要root), 像我这个调试机就是root不完全的, 不能直接安装系统CA证书, magisk有个工具<a target="_blank" rel="noopener" href="https://github.com/Magisk-Modules-Repo/movecert">movecert</a>可以解决这一点.</li>
+</ul>
+</li>
+<li>看一下是不是有其他地方的检查, 比如root检查, xposed检查, 代理检查……, 这些很多都有大哥写好的轮子, 到时候直接调用就行.</li>
+<li>检查是不是错误, 比如手机app提示网络错误, 或者抓包软件里面服务器响应为400, 如果没有, 做一下vpn流量转发或者使用其他代理流量的工具, 有一些app在和http服务器通讯的时候, 默认不会走代理的通信.</li>
+<li>这时候优先考虑本地校验服务器证书, 也就是证书固定, 尝试用frida脚本或者justTrustme来绕过本地校验服务器证书.有服务器校验客户端证书的app一般都会有客户端校验服务器, 以为客户端校验服务器证书比服务器校验客户端证书用的成本更低.</li>
+<li>在这里再看一下是不是抓到包但是数据包是不是报错</li>
+<li>如果服务器响应报错为400, 那应该是服务器校验客户端证书失败, 去寻找对应的公钥证书以及密钥, 并且导入到抓包软件.</li>
+<li>报错还是为app网络错误, 那应该是客户端校验服务器证书失败, 多半是前面的绕过本地校验服务器证书没有成功, 很有可能是开发商自己实现的通讯模块, 需要自己慢慢对app进行逆向再编写hook脚本了.</li>
+<li>考虑使用hook抓包, 或者此通信非https协议.</li>
+</ol>
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          
+          <li class="next">
+            <a href="/cn/bytectf-mitm/" data-toggle="tooltip" data-placement="top" title="bytectf_mitm">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      如果您喜欢此博客或发现它对您有用，则欢迎对此发表评论。 也欢迎您共享此博客，以便更多人可以参与。 如果博客中使用的图像侵犯了您的版权，请与作者联系以将其删除。 谢谢 ！
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=android抓包总结&body=Hi,I found this website and thought you might like it http://yoursite-url/cn/android抓包总结/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <!-- <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.js"></script> -->
+    <script src="/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: '',
+      clientSecret: '',
+      repo: '',
+      owner: '',
+      admin: '',
+      id: 'Thu Jun 15 2023 23:12:02 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'en',
+      proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#re-android" title="re-android">re-android</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>链友</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="https://v-vincen.life/" target="_blank">V_Vincen</a>
+          </li>
+          
+          <li>
+            <a href="http://beantech.org" target="_blank">Bean Tech</a>
+          </li>
+          
+          <li>
+            <a href="http://huangxuan.me" target="_blank">Hux Blog</a>
+          </li>
+          
+          <li>
+            <a href="https://hexo.io/" target="_blank">Hexo</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+            <li>
+              <a target="_blank" href="https://github.com/yimianweishi">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          marginal
+          2023
+          <br>
+          Theme by
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
+          <span style="display: inline-block; margin: 0 5px;">
+            <i class="fa fa-heart"></i>
+          </span>
+          re-Ported by
+          <a target="_blank" rel="noopener" href="https://v-vincen.life/">Live My Life</a>
+          |
+          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="/js/jquery.min.js"></script>
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="/js/hux-blog.min.js"></script>
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="/js/catalog.js"></script>
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script async="async" type="text/javascript" src="/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("http://yoursite-url/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="搜索..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+            
+
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>

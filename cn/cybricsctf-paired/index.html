@@ -1,0 +1,1283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-xxxxxx-xx"></script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-xxxxxx-xx');
+    </script>
+  
+
+  <!-- Baidu Tongji -->
+  
+    <script type="text/javascript">
+      // Originial
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="It&#39;s an IT blog..."/>
+  <meta name="keyword" content="marginal&#39;s blog"/>
+  <link rel="shortcut icon" href="/img/avatar/jumpers.jpg"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css"/>
+    <link rel="stylesheet" href="/css/widget.css"/>
+    <link rel="stylesheet" href="/css/rocket.css"/>
+    <link rel="stylesheet" href="/css/signature.css"/>
+    <link rel="stylesheet" href="/css/catalog.css"/>
+    <link rel="stylesheet" href="/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+      <!-- gitalk start -->
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
+      <link rel="stylesheet" href="/css/gitalk.css"/>
+      <!-- gitalk end -->
+    
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="http://yoursite-url/cn/cybricsctf-paired/">
+  <title>
+    
+      cybricsctf-paired - either thin | or die
+    
+  </title>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--dark">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'dark';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'your-community/your-room'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">marginal&#39;s blog</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">首页</a>
+          </li>
+
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
+          
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>搜索</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-post: url('');
+      --intro-header-background-image-url-page: url('/img/header_img/archive_bg2.jpg');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/archive_bg2.jpg');
+    }
+
+    header.intro-header {
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url(''); */
+      
+    }
+
+    
+  </style>
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#CTF reverse" title="CTF reverse">CTF reverse</a>
+              
+            </div>
+            <h1>cybricsctf-paired</h1>
+            <h2 class="subheading"></h2>
+            <span class="meta">
+              Posted by marginal on
+              2021-07-25
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">7</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">1.4k</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <h2 id="paired">paired</h2>
+<p>解包,先得到4个文件,运行app1.exe</p>
+<span id="more"></span>
+<h3 id="app1">app1</h3>
+<p><img src="image-20210725145959566.png" alt="image-20210725145959566"></p>
+<p>这几个函数不用再logic.dll里面分析,动调就可以知道是设置一个有id的储存</p>
+<h4 id="WinMain">WinMain</h4>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">wndclass.lpfnWndProc</span> = (WNDPROC)WndProc<span class="comment">;</span></span><br></pre></td></tr></table></figure>
+<p>根据窗口类lpfnWndProc的成员根据这里找到窗口过程</p>
+<h4 id="STAGE-1">STAGE 1</h4>
+<figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">GetWindowTextA(edit_hWnd, String, 128);</span><br><span class="line">    v15 = (unsigned __int8 *)&amp;v19;</span><br><span class="line">    do</span><br><span class="line">    &#123;</span><br><span class="line">      v16 = v15[String - (CHAR *)&amp;v19];</span><br><span class="line">      v17 = *v15 - v16;</span><br><span class="line">     <span class="built_in"> if </span>( v17 )</span><br><span class="line">        break;</span><br><span class="line">      ++v15;</span><br><span class="line">    &#125;</span><br><span class="line">    while ( v16 );</span><br><span class="line">   <span class="built_in"> if </span>( !v17 )</span><br><span class="line">    &#123;</span><br><span class="line">      SetWindowTextW(hWnd[0], <span class="class">L&quot;STAGE 2&quot;);</span></span><br><span class="line">      pass_to_stage2 = 1;</span><br><span class="line">    &#125;</span><br><span class="line">   <span class="built_in"> return </span>0i64;</span><br></pre></td></tr></table></figure>
+<p>这里获取edit控件字符串并检测,进入第二关</p>
+<h4 id="STAGE-2">STAGE 2</h4>
+<p>case WM_KEYDOWN(0x100):</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">else</span> <span class="keyword">if</span> ( pass_to_stage2 == <span class="number">1</span> )</span><br><span class="line">     &#123;</span><br><span class="line">       j = i;</span><br><span class="line">       <span class="keyword">if</span> ( wParam != aEnable[i] )</span><br><span class="line">       &#123;</span><br><span class="line">         i = <span class="number">0</span>;</span><br><span class="line">         <span class="keyword">return</span> <span class="number">0i</span>64;</span><br><span class="line">       &#125;</span><br><span class="line">       ++i;</span><br><span class="line">       <span class="keyword">if</span> ( !aEnable[j + <span class="number">1</span>] )</span><br><span class="line">       &#123;</span><br><span class="line">         pass_to_stage3 = <span class="number">1</span>;</span><br><span class="line">         SetWindowTextW(_hwnd, L<span class="string">&quot;STAGE 3...&quot;</span>);</span><br><span class="line">         add_to_storage(<span class="number">1i</span>64, hWnd);</span><br><span class="line">         <span class="keyword">return</span> <span class="number">0i</span>64;</span><br><span class="line">       &#125;</span><br><span class="line">     &#125;</span><br></pre></td></tr></table></figure>
+<p>按键要等于’ENABLE’</p>
+<p>进入第三关</p>
+<h4 id="STAGE-3">STAGE 3</h4>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">case</span> <span class="number">0x400</span>u:                                <span class="comment">// WM_USER</span></span><br><span class="line">      <span class="keyword">if</span> ( !get_flag )</span><br><span class="line">      &#123;</span><br><span class="line">        GetWindowTextA(edit_hWnd, String, <span class="number">128</span>);</span><br><span class="line">        add_to_storage(<span class="number">2i</span>64, String);</span><br><span class="line">        get_flag = <span class="number">1</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      v7 = VirtualAlloc(<span class="number">0i</span>64, <span class="number">0x200</span>ui64, <span class="number">0x1000</span>u, <span class="number">0x40</span>u);</span><br><span class="line">      get_data_from_storage((unsigned <span class="keyword">int</span>)(_wParam + <span class="number">32</span>), v7, <span class="number">128i</span>64);</span><br><span class="line">      v19 = <span class="number">0i</span>64;</span><br><span class="line">      v20 = <span class="number">0i</span>64;</span><br><span class="line">      v21 = <span class="number">0i</span>64;</span><br><span class="line">      v22 = <span class="number">0i</span>64;</span><br><span class="line">      v23 = <span class="number">0i</span>64;</span><br><span class="line">      v24 = <span class="number">0i</span>64;</span><br><span class="line">      v25 = <span class="number">0i</span>64;</span><br><span class="line">      v26 = <span class="number">0i</span>64;</span><br><span class="line">      get_data_from_storage(<span class="number">2i</span>64, &amp;v19, <span class="number">128i</span>64);</span><br><span class="line">      success += ((__int64 (__fastcall *)(_QWORD, __int128 *))v7)((unsigned <span class="keyword">int</span>)_wParam, &amp;v19);</span><br><span class="line">      <span class="keyword">if</span> ( success == <span class="number">32</span> )</span><br><span class="line">      &#123;</span><br><span class="line">        MessageBoxA(<span class="number">0i</span>64, <span class="string">&quot;Well done!&quot;</span>, <span class="string">&quot;WINNER!&quot;</span>, <span class="number">0</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0i</span>64;</span><br><span class="line">      &#125;</span><br></pre></td></tr></table></figure>
+<p>需要把消息WM_USER放入队列</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> ( pass_to_stage3 )</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="keyword">if</span> ( wParam == <span class="string">&#x27;F&#x27;</span> )                    <span class="comment">// fake</span></span><br><span class="line">        &#123;</span><br><span class="line">          v11 = <span class="number">0i</span>64;</span><br><span class="line">          v12 = <span class="number">32i</span>64;</span><br><span class="line">          while ( <span class="number">1</span> )</span><br><span class="line">          &#123;</span><br><span class="line">            PostMessageA(_hwnd, <span class="number">0x400</span>u, v11++, <span class="number">0i</span>64);</span><br><span class="line">            <span class="keyword">if</span> ( !--v12 )</span><br><span class="line">              <span class="keyword">break</span>;</span><br><span class="line">            _hwnd = hWnd[<span class="number">0</span>];</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br></pre></td></tr></table></figure>
+<p>这里可以加入WM_USER消息,动调查看v7函数之后,得到输入为this_is_just_some_random_string!,是fake flag,很明显不可能只分析一个文件</p>
+<h3 id="app2">app2</h3>
+<p>直接进入sub_7FF64E911210()函数分析</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">hWnd</span> = HWND_MESSAGE|<span class="number">0</span>x<span class="number">2</span>;</span><br><span class="line">  <span class="attribute">LODWORD</span>(l) = get_data_from_storage(<span class="number">1</span>i<span class="number">64</span>, &amp;hWnd);</span><br><span class="line">  <span class="attribute">v1</span> = hWnd;</span><br><span class="line">  <span class="attribute">if</span> ( hWnd != HWND_MESSAGE|<span class="number">0</span>x<span class="number">2</span> )</span><br></pre></td></tr></table></figure>
+<p>这里获取id==7的储存赋值给hwnd,再看前面通过第二关时</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">add_to_storage</span>(<span class="number">1</span>i<span class="number">64</span>, hWnd);</span><br></pre></td></tr></table></figure>
+<p>只有通过第二关,这里条件才为真, 接下来关注消息的发送, 这里所用的消息发送都将发送wparam==32的消息,执行id==64的代码,</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">PostMessageA</span>(v<span class="number">1</span>, <span class="number">0</span>x<span class="number">400</span>u, <span class="number">0</span>x<span class="number">20</span>ui<span class="number">64</span>, <span class="number">0</span>i<span class="number">64</span>);</span><br><span class="line"><span class="attribute">for</span> ( i = -<span class="number">1</span>i<span class="number">64</span>; i == -<span class="number">1</span>; get_data_from_storage(<span class="number">3</span>i<span class="number">64</span>, &amp;i) );</span><br></pre></td></tr></table></figure>
+<p>先动调app1,进入第二关后,把断点下在第三关,然后动调app2, 运行过发送消息</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">((<span class="name">void</span> (<span class="name">__fastcall</span> *)(<span class="name">__int64</span>, void **, __int64))logic_dll_add_to_storage)(<span class="number">3</span>i64, &amp;retaddr, <span class="number">8</span>i64)<span class="comment">;</span></span><br></pre></td></tr></table></figure>
+<p>v7函数, 把基地址存为id==3的储存中, 储存完成后 app2的循环停止</p>
+<figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">get_data_from_storage(2i64, v61);</span><br><span class="line">   v3 = -1i64;</span><br><span class="line">   do</span><br><span class="line">     ++v3;</span><br><span class="line">   while ( v61[v3] );</span><br><span class="line">  <span class="built_in"> if </span>( (_DWORD)v3 == 32 )</span><br></pre></td></tr></table></figure>
+<p>这里是长度检验, id==2是app1的输入框内容, 先判断不成立的情况, 这里的代码由随机数组成, srand(time(0)), 明显有很大问题</p>
+<p>判断成立的情况</p>
+<figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">v10 = _mm_load_si128((<span class="name">const</span> __m128i *)&amp;byte_7FF64E926630);</span><br><span class="line">     for ( j = 0i64; j &lt; 32; j += 16i64 )</span><br><span class="line">       *(<span class="name">__m128i</span> *)&amp;v61[j] = _mm_xor_si128(v10, _mm_loadu_si128((const __m128i *)<span class="symbol">&amp;v61</span>[j]))<span class="comment">;</span></span><br></pre></td></tr></table></figure>
+<p>一段异或加密, 到这里</p>
+<figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">get_data_from_storage(2i64, v62);</span><br><span class="line">do</span><br><span class="line">     &#123;</span><br><span class="line">       *(__m128i *)&amp;v62[4 * v16] = _mm_xor_si128(_mm_loadu_si128((const __m128i *)&amp;v62[4 * v16]), v17);</span><br><span class="line">       v16 += 4i64;</span><br><span class="line">     &#125;</span><br><span class="line">     while ( v16 &lt; 8 );</span><br></pre></td></tr></table></figure>
+<p>又是一段异或加密</p>
+<figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">get_data_from_storage(<span class="number">5</span>i64, <span class="symbol">&amp;i</span>)<span class="comment">;</span></span><br><span class="line">while ( (<span class="name">_DWORD</span>)i != &#x27;cybr&#x27; )<span class="comment">;</span></span><br></pre></td></tr></table></figure>
+<p>这里有循环条件,这是其实是rbyc, id==5的由来(app1中):</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">__int64 sub_1AD49780000()</span><br><span class="line">&#123;</span><br><span class="line">  GetWindowTextA((HWND)<span class="number">0xBD04BA</span>, byte_1AD49760000, <span class="number">128</span>);</span><br><span class="line">  ((void (__fastcall *)(__int64, __int64, __int64))logic_dll_add_to_storage)(<span class="number">5i</span>64, <span class="number">0x1AD49760000i</span>64, <span class="number">4i</span>64);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0i</span>64;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>输入放入id==5, 检查前面4个字节为’rbyc’, 第二次异或加密</p>
+<figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">do</span><br><span class="line">      &#123;</span><br><span class="line">        *(__m128i *)&amp;v62[4 * v16] = _mm_xor_si128(_mm_loadu_si128((const __m128i *)&amp;v62[4 * v16]), v17);</span><br><span class="line">        v16 += 4i64;</span><br><span class="line">      &#125;</span><br><span class="line">      while ( v16 &lt; 8 );</span><br></pre></td></tr></table></figure>
+<p>然后来到swith结构, 像极了虚拟机</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">switch</span> ( *((_BYTE *)&amp;unk_<span class="number">7</span>FF<span class="number">64</span>E<span class="number">910000</span> + index + <span class="number">100864</span>) ) // byte_<span class="number">7</span>FF<span class="number">64</span>E<span class="number">928</span>A<span class="number">00</span></span><br></pre></td></tr></table></figure>
+<p>然后慢慢单步走, 慢慢会发现先一直都是1, 2, 然后走5, 6, 8, 3, 8, a, 接下来就又是1, 2…, 最后, 2, 3, 4</p>
+<p>(地址只是一个临时的值,主要怎么计算得到)</p>
+<h4 id="case-1">case 1:</h4>
+<p>app1中的执行的代码</p>
+<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">u<span class="symbol">nk_19</span>BE<span class="number">3430010</span> = <span class="number">0</span>i<span class="number">64</span>; <span class="comment">// unk_19BE3430010 == *(id==6的数据 + byte_7FF64E928A00[index + 1])</span></span><br><span class="line"><span class="comment">// 0 == *(dword *)(byte_7FF64E928A00 + index + 2)</span></span><br><span class="line">  <span class="comment">((void (__fastcall *)</span><span class="comment">(__int64, __int64, __int64)</span>)logic_dll_add_to_storage)<span class="comment">(10i64, 0x7FF786F70000i64, 8i64)</span>;</span><br></pre></td></tr></table></figure>
+<h4 id="case-2">case 2:</h4>
+<p>app1中的执行的代码</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">((<span class="name">void</span> (<span class="name">__fastcall</span> *)(<span class="name">__int64</span>, __int64, __int64))logic_dll_add_to_storage)(<span class="number">7</span>i64, <span class="number">0</span>x19BE3430070i64, <span class="number">8</span>i64)<span class="comment">;</span></span><br><span class="line"> ((<span class="name">void</span> (<span class="name">__fastcall</span> *)(<span class="name">__int64</span>, __int64, __int64))logic_dll_add_to_storage)(<span class="number">10</span>i64, <span class="number">0</span>x7FF786F70000i64, <span class="number">8</span>i64)<span class="comment">;</span></span><br></pre></td></tr></table></figure>
+<p>id == 7的数据换为(id==6的数据 + byte_7FF64E928A00[index + 1])</p>
+<h4 id="case-3">case 3:</h4>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">v25</span> = *(unsigned int *)((char *)&amp;unk_<span class="number">7</span>FF<span class="number">64</span>E<span class="number">910000</span> + index + <span class="number">100865</span>);// *(dword *)(byte_<span class="number">7</span>FF<span class="number">64</span>E<span class="number">928</span>A<span class="number">00</span> + index + <span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">v26</span> = &amp;i<span class="comment">;</span></span><br><span class="line"><span class="attr">i</span> = i == v25<span class="comment">; //出现了比较</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="constructor">LODWORD(<span class="params">l</span>)</span> = add<span class="constructor">_to_storage(7i64, <span class="params">v26</span>)</span>; <span class="comment">//比较结果在id == 7数据中</span></span><br></pre></td></tr></table></figure>
+<p>接下来会执行case 8, 将结果(1)加在 *(id==6的数据 + 8)中</p>
+<p>这里就和app1中的加到32有点像了</p>
+<h4 id="case-4">case 4:</h4>
+<p>这里是最后的指令, 先前的两步2, 3, 分别是把数据给到id == 7(就是每次比较的结果相加的数据)和 将id == 7与32做比较(和app1重合了), 若为真, 则id == 7 变为1</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">if</span> ( l != <span class="number">1</span> )</span><br></pre></td></tr></table></figure>
+<p>则app1中的执行的代码</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">return</span> <span class="number">32</span>i<span class="number">64</span>;</span><br></pre></td></tr></table></figure>
+<p>这样就正确了</p>
+<h4 id="case-5">case 5:</h4>
+<p>将id==7的数据换为*(dword *)(byte_7FF64E928A00 + index + 1)</p>
+<h4 id="case-6">case 6:</h4>
+<p>app1中的执行的代码</p>
+<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">u<span class="symbol">nk_27</span>DA<span class="number">7</span>C<span class="number">30008</span> = <span class="number">0</span>x<span class="number">81818181</span>i<span class="number">64</span>; <span class="comment">// *(id==6的数据 + byte_7FF64E928A00[index + 1]) = (id == 2的数据(input))</span></span><br><span class="line">  <span class="comment">((void (__fastcall *)</span><span class="comment">(__int64, __int64, __int64)</span>)logic_dll_add_to_storage)<span class="comment">(10i64, 0x7FF786F70000i64, 8i64)</span>;</span><br></pre></td></tr></table></figure>
+<h4 id="case-8">case 8:</h4>
+<p>app1中的执行的代码:</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">((<span class="name">void</span> (<span class="name">__fastcall</span> *)(<span class="name">__int64</span>, __int64, __int64))logic_dll_add_to_storage)(<span class="number">7</span>i64, <span class="number">0</span>x27DA7C30008i64, <span class="number">8</span>i64)<span class="comment">;</span></span><br><span class="line"> ((<span class="name">void</span> (<span class="name">__fastcall</span> *)(<span class="name">__int64</span>, __int64, __int64))logic_dll_add_to_storage)(<span class="number">10</span>i64, <span class="number">0</span>x7FF786F70000i64, <span class="number">8</span>i64)<span class="comment">;</span></span><br></pre></td></tr></table></figure>
+<p>(id == 7的数据) = *(id==6的数据 + byte_7FF64E928A00[index + 1])</p>
+<p>app2:</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">get_data_from_storage</span>(<span class="number">7</span>i<span class="number">64</span>, &amp;i);</span><br></pre></td></tr></table></figure>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> ( <span class="built_in">ii</span> = <span class="literal">-1i64</span>; <span class="built_in">ii</span> == <span class="literal">-1</span>; get_data_from_storage(<span class="number">7</span>i64, &amp;<span class="built_in">ii</span>) )</span><br><span class="line">                ;</span><br><span class="line">              i += <span class="built_in">ii</span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">remove<span class="constructor">_data(7i64)</span>;</span><br><span class="line">             <span class="constructor">LODWORD(<span class="params">l</span>)</span> = add<span class="constructor">_to_storage(7i64, &amp;<span class="params">i</span>)</span>;</span><br></pre></td></tr></table></figure>
+<h4 id="case-a">case a:</h4>
+<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">u<span class="symbol">nk_27</span>DA<span class="number">7</span>C<span class="number">30010</span> = <span class="number">0</span>i<span class="number">64</span>;</span><br><span class="line">  <span class="comment">((void (__fastcall *)</span><span class="comment">(__int64, __int64, __int64)</span>)logic_dll_add_to_storage)<span class="comment">(10i64, 0x7FF786F70000i64, 8i64)</span>;</span><br></pre></td></tr></table></figure>
+<p>将 id==7 赋值给*(id == 6 + 10)</p>
+<h4 id="综上可以发现">综上可以发现</h4>
+<p>这里的1, 2指令中的其他一堆赋值貌似没什么用,主要就是每次取字符串的4个字节来加法,加数为指令3的参数(后面一个值), 结果存放在偏移量为0x10的地址中, 然后比较一下是否为32</p>
+<h3 id="解密脚本">解密脚本</h3>
+<p>减法解密直接python敲出来就行了</p>
+<figure class="highlight x86asm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line"></span><br><span class="line">using namespace <span class="keyword">std</span><span class="comment">;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> main()</span><br><span class="line">&#123;</span><br><span class="line">	unsigned char byte_7FF64E926630[<span class="number">16</span>] = &#123;</span><br><span class="line">    <span class="number">0x81</span>, <span class="number">0x81</span>, <span class="number">0x81</span>, <span class="number">0x81</span>, <span class="number">0x81</span>, <span class="number">0x81</span>, <span class="number">0x81</span>, <span class="number">0x81</span>, <span class="number">0x81</span>, <span class="number">0x81</span>, <span class="number">0x81</span>, <span class="number">0x81</span>, <span class="number">0x81</span>, <span class="number">0x81</span>, <span class="number">0x81</span>, <span class="number">0x81</span></span><br><span class="line">&#125;<span class="comment">;</span></span><br><span class="line">	unsigned char a[] = &#123;<span class="number">0x90</span>,<span class="number">0x9a</span>,<span class="number">0x9a</span>, <span class="number">0x90</span>, </span><br><span class="line">				<span class="number">0x9a</span>, <span class="number">0x80</span>,</span><br><span class="line">				<span class="number">0x8b</span>,<span class="number">0x99</span>,<span class="number">0x80</span>,<span class="number">0x8b</span>,</span><br><span class="line">				<span class="number">0xb8</span>,<span class="number">0x90</span>,<span class="number">0x96</span>,<span class="number">0x87</span>,</span><br><span class="line">				<span class="number">0xa7</span>,<span class="number">0x91</span>, <span class="number">0xc0</span>, <span class="number">0x80</span>, </span><br><span class="line">				<span class="number">0x8c</span>, <span class="number">0xd3</span>, <span class="number">0x9c</span>, <span class="number">0x8d</span>, </span><br><span class="line">				<span class="number">0xa7</span>, <span class="number">0x8f</span>, <span class="number">0xb3</span>,<span class="number">0x84</span>, </span><br><span class="line">				<span class="number">0xc9</span>, <span class="number">0x81</span>, <span class="number">0xd2</span>, <span class="number">0xd2</span>, </span><br><span class="line">				<span class="number">0xd9</span>, <span class="number">0x9f</span>&#125;<span class="comment">;</span></span><br><span class="line">	char key[] = &#123;<span class="number">0x72</span>, <span class="number">0x62</span>, <span class="number">0x79</span>, <span class="number">0x63</span>&#125;<span class="comment">;</span></span><br><span class="line">	for (<span class="keyword">int</span> i = <span class="number">0</span><span class="comment">; i &lt; 32; i++)</span></span><br><span class="line">	&#123;</span><br><span class="line">		a[i] ^= key[i % <span class="number">4</span>]<span class="comment">;</span></span><br><span class="line">	&#125;</span><br><span class="line">	for (<span class="keyword">int</span> i = <span class="number">0</span><span class="comment">; i &lt; 32; i++)</span></span><br><span class="line">	&#123;</span><br><span class="line">		a[i] ^= <span class="number">0x81</span><span class="comment">;</span></span><br><span class="line">	&#125;</span><br><span class="line">	for (<span class="keyword">int</span> i = <span class="number">0</span><span class="comment">; i &lt; 32; i++)</span></span><br><span class="line">	&#123;</span><br><span class="line">		printf(<span class="string">&quot;%c&quot;</span>, a[i])<span class="comment">;</span></span><br><span class="line">	&#125;</span><br><span class="line">	system(<span class="string">&quot;pause&quot;</span>)<span class="comment">;</span></span><br><span class="line">	return <span class="number">0</span><span class="comment">;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/cn/myrandom/" data-toggle="tooltip" data-placement="top" title="myrandom">&larr; Previous Post</a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/cn/vnctf-part-wp/" data-toggle="tooltip" data-placement="top" title="vnctf-part-wp">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      如果您喜欢此博客或发现它对您有用，则欢迎对此发表评论。 也欢迎您共享此博客，以便更多人可以参与。 如果博客中使用的图像侵犯了您的版权，请与作者联系以将其删除。 谢谢 ！
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=cybricsctf-paired&body=Hi,I found this website and thought you might like it http://yoursite-url/cn/cybricsctf-paired/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <!-- <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.js"></script> -->
+    <script src="/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: '',
+      clientSecret: '',
+      repo: '',
+      owner: '',
+      admin: '',
+      id: 'Sun Jul 25 2021 14:43:48 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'en',
+      proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#CTF reverse" title="CTF reverse">CTF reverse</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>链友</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="https://v-vincen.life/" target="_blank">V_Vincen</a>
+          </li>
+          
+          <li>
+            <a href="http://beantech.org" target="_blank">Bean Tech</a>
+          </li>
+          
+          <li>
+            <a href="http://huangxuan.me" target="_blank">Hux Blog</a>
+          </li>
+          
+          <li>
+            <a href="https://hexo.io/" target="_blank">Hexo</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+            <li>
+              <a target="_blank" href="https://github.com/yimianweishi">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          marginal
+          2023
+          <br>
+          Theme by
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
+          <span style="display: inline-block; margin: 0 5px;">
+            <i class="fa fa-heart"></i>
+          </span>
+          re-Ported by
+          <a target="_blank" rel="noopener" href="https://v-vincen.life/">Live My Life</a>
+          |
+          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="/js/jquery.min.js"></script>
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="/js/hux-blog.min.js"></script>
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="/js/catalog.js"></script>
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script async="async" type="text/javascript" src="/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("http://yoursite-url/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="搜索..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+            
+
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>

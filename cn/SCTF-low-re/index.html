@@ -1,0 +1,1243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+  <!-- Google Analytics -->
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-xxxxxx-xx"></script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-xxxxxx-xx');
+    </script>
+  
+
+  <!-- Baidu Tongji -->
+  
+    <script type="text/javascript">
+      // Originial
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="It&#39;s an IT blog..."/>
+  <meta name="keyword" content="marginal&#39;s blog"/>
+  <link rel="shortcut icon" href="/img/avatar/jumpers.jpg"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css"/>
+    <link rel="stylesheet" href="/css/widget.css"/>
+    <link rel="stylesheet" href="/css/rocket.css"/>
+    <link rel="stylesheet" href="/css/signature.css"/>
+    <link rel="stylesheet" href="/css/catalog.css"/>
+    <link rel="stylesheet" href="/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+      <!-- gitalk start -->
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
+      <link rel="stylesheet" href="/css/gitalk.css"/>
+      <!-- gitalk end -->
+    
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="http://yoursite-url/cn/SCTF-low-re/">
+  <title>
+    
+      SCTF low_re - either thin | or die
+    
+  </title>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--dark">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'dark';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'your-community/your-room'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">marginal&#39;s blog</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">首页</a>
+          </li>
+
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
+          
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>搜索</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-post: url('');
+      --intro-header-background-image-url-page: url('/img/header_img/archive_bg2.jpg');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/archive_bg2.jpg');
+    }
+
+    header.intro-header {
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url(''); */
+      
+    }
+
+    
+  </style>
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+            </div>
+            <h1>SCTF low_re</h1>
+            <h2 class="subheading"></h2>
+            <span class="meta">
+              Posted by marginal on
+              2022-01-04
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">16</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">3k</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <h2 id="SCTF-low-re">SCTF low_re</h2>
+<p>这个题其实算是逆向题, 考虑到这个题不是常规逆向思路, 并且有点谜语, 所以我把这个题放misc里面了.</p>
+<span id="more"></span>
+<p>出题人比较菜, 如果给师傅们造成了不好的体验, 轻点骂, orz.</p>
+<p>这个题目的预期解是通过pintool之类的插桩工具进行指令计数来进行爆破, 但是我也看到有一些师傅使用钩子来获得信息的一些思路, 甚至于做了一些vmp的逆向, 师傅们tql.</p>
+<h3 id="出题思路">出题思路</h3>
+<h4 id="首先python源代码">首先python源代码</h4>
+<p>这里是单字节加密(所以可以使用侧信道爆破)</p>
+<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br></pre></td><td class="code"><pre><span class="line">import hashlib</span><br><span class="line">import sys</span><br><span class="line"></span><br><span class="line">def _rc4_crypt(key, data, dataLen):</span><br><span class="line">    out = []</span><br><span class="line">    s_box = list(range(<span class="number">256</span>))</span><br><span class="line">    j = <span class="number">0</span></span><br><span class="line">    for i in range(<span class="number">256</span>):</span><br><span class="line">        j = (j + s_box[i] + ord(key[i % len(key)])) % <span class="number">256</span></span><br><span class="line">        s_box[i], s_box[j] = s_box[j], s_box[i]</span><br><span class="line"></span><br><span class="line">    for x in range(dataLen):</span><br><span class="line">        i = (i + <span class="number">1</span>) % <span class="number">256</span></span><br><span class="line">        j = (j + s_box[i]) % <span class="number">256</span></span><br><span class="line">        t = s_box[i]</span><br><span class="line">        s_box[i] = s_box[j]</span><br><span class="line">        s_box[j] = t</span><br><span class="line">        ti = (s_box[i] + (s_box[j] % <span class="number">256</span>)) % <span class="number">256</span></span><br><span class="line">        t = s_box[ti]</span><br><span class="line">        while (len(out) &lt; x + <span class="number">1</span>):</span><br><span class="line">            out.append(<span class="number">0</span>)</span><br><span class="line">        out[x] = data[x] ^ t</span><br><span class="line">    return out</span><br><span class="line"></span><br><span class="line">def linux_srand(seed):</span><br><span class="line">    if seed == <span class="number">0</span>:</span><br><span class="line">        seed = <span class="number">1</span></span><br><span class="line">    word = seed</span><br><span class="line">    seed = seed <span class="meta">&amp; 0xffffffff</span></span><br><span class="line">    global linux_status</span><br><span class="line">    global linux_r</span><br><span class="line">    linux_status = <span class="number">0</span></span><br><span class="line">    linux_r = [<span class="number">0</span>] * (<span class="number">344</span> + linux_status)</span><br><span class="line">    linux_r[<span class="number">0</span>] = seed</span><br><span class="line">    for i in range(<span class="number">1</span>, <span class="number">31</span>):</span><br><span class="line">        if (word &lt; <span class="number">0</span>):</span><br><span class="line">            hi = (-word) <span class="comment">// 127773</span></span><br><span class="line">            hi = -hi</span><br><span class="line">            lo = (-word) % <span class="number">127773</span></span><br><span class="line">            lo = -lo</span><br><span class="line">        else:</span><br><span class="line">            hi = word <span class="comment">// 127773</span></span><br><span class="line">            lo = word % <span class="number">127773</span></span><br><span class="line">        word = ((<span class="number">16807</span> * lo)) - ((<span class="number">2836</span> * hi))</span><br><span class="line">        if word &lt; <span class="number">0</span>:</span><br><span class="line">            word = (<span class="number">2147483647</span> + word) <span class="meta">&amp; 0xffffffff</span></span><br><span class="line">        linux_r[i] = word</span><br><span class="line">    for i in range(<span class="number">31</span>, <span class="number">34</span>):</span><br><span class="line">        linux_r[i] = linux_r[i - <span class="number">31</span>]</span><br><span class="line">    for i in range(<span class="number">34</span>, <span class="number">344</span>):</span><br><span class="line">        linux_r[i] = (((linux_r[i - <span class="number">31</span>] + linux_r[i - <span class="number">3</span>]) <span class="meta">&amp; 0xffffffff) % (1 &lt;&lt; 32)) &amp; 0xffffffff</span></span><br><span class="line"></span><br><span class="line">def linux_rand():</span><br><span class="line">    global linux_status</span><br><span class="line">    global linux_r</span><br><span class="line">    linux_r.append(<span class="number">0</span>)</span><br><span class="line">    linux_r[<span class="number">344</span> + linux_status] = (((linux_r[<span class="number">344</span> + linux_status - <span class="number">31</span>] + linux_r[<span class="number">344</span> + linux_status - <span class="number">3</span>]) <span class="meta">&amp; 0xffffffff) % (1 &lt;&lt; 32)) &amp; 0xffffffff</span></span><br><span class="line">    linux_status += <span class="number">1</span></span><br><span class="line">    return linux_r[<span class="number">344</span> + linux_status - <span class="number">1</span>] &gt;&gt; <span class="number">1</span></span><br><span class="line">print(<span class="string">&quot;hello challanger&quot;</span>)</span><br><span class="line">flag = input(<span class="string">&quot;please input your flag:\n&quot;</span>)</span><br><span class="line">if (type(flag) != str):</span><br><span class="line">    print(<span class="string">&quot;error&quot;</span>)</span><br><span class="line">    sys.exit()</span><br><span class="line">if (len(flag) != <span class="number">17</span>):</span><br><span class="line">    sys.exit()</span><br><span class="line">flag = list(bytes(flag, encoding=&#x27;utf-8&#x27;))</span><br><span class="line">flag = _rc4_crypt(&#x27;Sycl0ver&#x27;, flag, len(flag))</span><br><span class="line">for i in range(len(flag)):</span><br><span class="line">    linux_srand(flag[i])</span><br><span class="line">    flag[i] = str(linux_rand())</span><br><span class="line">ciphertext=[&#x27;ee197bbac1b0e09c425e1dfd30cea<span class="number">2506</span>bd493a674c4de90d9afbe5abc700b06&#x27;,</span><br><span class="line">&#x27;1a6aafb16a23ffde40c426d5c87f5afcc77fffc96cf041dc8dd2c47e706a7ecb&#x27;,</span><br><span class="line">&#x27;62c62ce<span class="number">7768</span>a<span class="number">4836</span>b<span class="number">10495317</span>a32da6e<span class="number">3943</span>d522bc3b<span class="number">9797</span>ff0a<span class="number">4493</span>1e966a31&#x27;,</span><br><span class="line">&#x27;e<span class="number">622235</span>4b50e4d33d<span class="number">7331</span>4b515b<span class="number">325633</span>e57a<span class="number">105758</span>e20aca23eb2dadd625f3f&#x27;,</span><br><span class="line">&#x27;78f92a6ad9ffcec47f30e3ca3d<span class="number">1806</span>5bdba9c020ff5f477b801d11efdfaa9cd0&#x27;,</span><br><span class="line">&#x27;<span class="number">127291</span>de1f4cbbb35c<span class="number">4155</span>6a3c6d5a64f<span class="number">0866</span>1bc7ed394ea<span class="number">621035</span>4e<span class="number">6218</span>ad93&#x27;,</span><br><span class="line">&#x27;62c62ce<span class="number">7768</span>a<span class="number">4836</span>b<span class="number">10495317</span>a32da6e<span class="number">3943</span>d522bc3b<span class="number">9797</span>ff0a<span class="number">4493</span>1e966a31&#x27;,</span><br><span class="line">&#x27;<span class="number">52080868</span>c07a9ef<span class="number">5646</span>b5f0b198f04f013cf23cfbfb<span class="number">0612</span>3d8f2fdd63d<span class="number">359123</span>&#x27;,</span><br><span class="line">&#x27;f69b<span class="number">52599973</span>fc<span class="number">5915</span>ad1d<span class="number">435236863252</span>dc3fd<span class="number">460989</span>bd9f56ffc199ef8ff36&#x27;,</span><br><span class="line">&#x27;e<span class="number">9552</span>f8c3e<span class="number">51830652</span>4fa9c<span class="number">9728</span>ad6dee88fa611aa<span class="number">3068</span>c<span class="number">169217</span>f<span class="number">173964</span>f9b4&#x27;,</span><br><span class="line">&#x27;54cb43f463ea<span class="number">08269913</span>1b71d45fb<span class="number">0384</span>f8c2f598e8f<span class="number">0072</span>b960b4add731e048&#x27;,</span><br><span class="line">&#x27;97e45e15c74f71ea59ffffb<span class="number">4029</span>8f2e5dec119c<span class="number">2205</span>e434e3a0d<span class="number">2510</span>c<span class="number">331037</span>f&#x27;,</span><br><span class="line">&#x27;51b7d78cfe25ede262fd85a65b<span class="number">2472</span>1f076ab9dd<span class="number">6562403878</span>ca5cde1ebf<span class="number">3219</span>&#x27;,</span><br><span class="line">&#x27;a1cd6c<span class="number">7990</span>abb6b<span class="number">27169538</span>1d<span class="number">7889</span>8ec5c<span class="number">4880</span>fbc0f6a0c9fda<span class="number">064422</span>f<span class="number">2136</span>1e&#x27;,</span><br><span class="line">&#x27;85ddd<span class="number">3721</span>d<span class="number">173367465373</span>f75e190bd937a8dc<span class="number">3588</span>d5d82ebff<span class="number">8104</span>dec88ac3e&#x27;,</span><br><span class="line">&#x27;d6eeac4ea40f<span class="number">951339</span>1ef0bf72aa2fd<span class="number">258888</span>9cb9d5f4cc638ce4d2c<span class="number">550952</span>7b&#x27;,</span><br><span class="line">&#x27;<span class="number">502393</span>9dca<span class="number">9273</span>fd767d5e4ea<span class="number">329846</span>f<span class="number">9816</span>af461e170b6db8d20b6e5ff3de8c&#x27;]</span><br><span class="line">for i in range(len(flag)):</span><br><span class="line">    for j in range(<span class="number">2560</span>):</span><br><span class="line">        s = hashlib.sha256()</span><br><span class="line">        s.update(bytes(flag[i], encoding=&#x27;utf-8&#x27;))</span><br><span class="line">        flag[i] = s.hexdigest()</span><br><span class="line">    <span class="meta">#print(&quot;&#x27;&quot; + flag[i]+ &quot;&#x27;,&quot;)</span></span><br><span class="line">    if (flag[i] != ciphertext[i]):</span><br><span class="line">        sys.exit()</span><br><span class="line">print(<span class="string">&quot;you are right&quot;</span>)</span><br><span class="line">sys.exit()</span><br></pre></td></tr></table></figure>
+<h4 id="混淆python">混淆python</h4>
+<p>使用python pyminifier的混淆功能去混淆python代码</p>
+<p>虽然有一种乱码混淆, 但是可能会导致这样那样的问题, 我就没有使用了</p>
+<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pyminifier <span class="comment">--obfuscate</span></span><br></pre></td></tr></table></figure>
+<p>混淆出来之后可能点错误, 手动改改就ok了.</p>
+<h4 id="转化为C代码并且编译">转化为C代码并且编译</h4>
+<p>在文件的开头记得加上python3的声明 不然会转化失败</p>
+<figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># cython: language_level=3</span></span><br></pre></td></tr></table></figure>
+<p>网上python的一个GCC编译exe的脚本</p>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> subprocess</span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> tempfile</span><br><span class="line"><span class="keyword">from</span> Cython.Compiler <span class="keyword">import</span> Main, CmdLine, <span class="keyword">Options</span></span><br><span class="line"></span><br><span class="line">in_file_name = sys.argv[<span class="number">1</span>]</span><br><span class="line">source = <span class="keyword">open</span>(in_file_name).<span class="keyword">read</span>()</span><br><span class="line">out_file_name = in_file_name.replace(<span class="string">&#x27;.py&#x27;</span>, <span class="string">&#x27;.exe&#x27;</span>)</span><br><span class="line"></span><br><span class="line">temp_py_file = tempfile.NamedTemporaryFile(suffix=<span class="string">&#x27;.py&#x27;</span>, <span class="keyword">delete</span>=<span class="keyword">False</span>)</span><br><span class="line">temp_py_file.<span class="keyword">write</span>(source.encode())</span><br><span class="line">temp_py_file.flush()</span><br><span class="line"></span><br><span class="line">Main.<span class="keyword">Options</span>.embed = <span class="string">&#x27;main&#x27;</span></span><br><span class="line">res = Main.compile_single(temp_py_file.name, Main.CompilationOptions(), <span class="string">&#x27;&#x27;</span>)</span><br><span class="line"></span><br><span class="line">gcc_cmd = <span class="string">&#x27;gcc -static -municode -DMS_WIN64 -fPIC -O2 %s -Id:\\Python\\Python38\\include -Ld:\\Python\\Python38\\libs -lpython38 -o %s&#x27;</span> % (res.c_file, out_file_name)</span><br><span class="line"></span><br><span class="line">print(gcc_cmd)</span><br><span class="line"><span class="keyword">assert</span> <span class="number">0</span> == subprocess.check_call(gcc_cmd.split(<span class="string">&#x27; &#x27;</span>))</span><br></pre></td></tr></table></figure>
+<p>这里的unicode是因为winmain, 如果不用unicode会报错.</p>
+<p>这样就生成了exe</p>
+<h4 id="vmp加壳">vmp加壳</h4>
+<p>网上找一个&quot;学习&quot;版的加壳软件, 关闭内存保护, 这样就可以进行插桩了.</p>
+<h3 id="题解">题解</h3>
+<h4 id="侧信道爆破工具构建">侧信道爆破工具构建</h4>
+<p>师傅们基本上都是用的官方给的代码来构建, 但是pin官方给的指令计数是算了库的, 这样的话计算出来的指令正常波动就会非常大, 所以我使用了2560次的hash加密, 希望能够使得正确答案的指令大小更为明显, 但是我自己爆破的时候, 如果从头开始爆破, 在得到最后几个字符的时候可能会发生错误. 在和小组另外一个师傅的交流之后, 发现如果不计算库的时候指令波动会非常小.</p>
+<h5 id="pin">pin</h5>
+<p>下载地址https://www.intel.com/content/www/us/en/developer/articles/tool/pin-a-binary-instrumentation-tool-downloads.html</p>
+<p>pin工具可以实现不算库的爆破, 但是官方好像没有给不计算库的指令的代码, 需要自己去写判断, 这里我做的限制条件是 exe的首地址 &lt;= 需要计数指令的地址 &lt;= exe的结束地址.</p>
+<p>source/MyPinTool/MyPinTool.cpp: (用VS打开.vcxproj后缀文件就可以进行写代码了)</p>
+<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * Copyright 2002-2020 Intel Corporation.</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * This software is provided to you as Sample Source Code as defined in the accompanying</span></span><br><span class="line"><span class="comment"> * End User License Agreement for the Intel(R) Software Development Products (&quot;Agreement&quot;)</span></span><br><span class="line"><span class="comment"> * section 1.L.</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * This software and the related documents are provided as is, with no express or implied</span></span><br><span class="line"><span class="comment"> * warranties, other than those that are expressly stated in the License.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"> <span class="comment">/*! @file</span></span><br><span class="line"><span class="comment">  *  This file contains an ISA-portable PIN tool for counting dynamic instructions</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line"></span><br><span class="line">#<span class="keyword">include</span> <span class="string">&quot;pin.H&quot;</span></span><br><span class="line">#<span class="keyword">include</span> &lt;iostream&gt;</span><br><span class="line">using std::cerr;</span><br><span class="line">using std::endl;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* ===================================================================== */</span></span><br><span class="line"><span class="comment">/* Global Variables */</span></span><br><span class="line"><span class="comment">/* ===================================================================== */</span></span><br><span class="line"></span><br><span class="line">UINT64 ins_count = <span class="number">0</span>;</span><br><span class="line"><span class="built_in">bool</span> runing = <span class="literal">false</span>;</span><br><span class="line">UINT64 exe_start;</span><br><span class="line">UINT64 exe_size;</span><br><span class="line"><span class="comment">/* ===================================================================== */</span></span><br><span class="line"><span class="comment">/* Commandline Switches */</span></span><br><span class="line"><span class="comment">/* ===================================================================== */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* ===================================================================== */</span></span><br><span class="line"><span class="comment">/* Print Help Message                                                    */</span></span><br><span class="line"><span class="comment">/* ===================================================================== */</span></span><br><span class="line"></span><br><span class="line">INT32 <span class="constructor">Usage()</span></span><br><span class="line">&#123;</span><br><span class="line">    cerr &lt;&lt; <span class="string">&quot;This tool prints out the number of dynamic instructions executed to stderr.\n&quot;</span></span><br><span class="line">        <span class="string">&quot;\n&quot;</span>;</span><br><span class="line"></span><br><span class="line">    cerr &lt;&lt; KNOB_BASE::<span class="constructor">StringKnobSummary()</span>;</span><br><span class="line"></span><br><span class="line">    cerr &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    return -<span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* ===================================================================== */</span></span><br><span class="line"></span><br><span class="line">VOID docount<span class="literal">()</span> &#123; ins_count++; &#125; </span><br><span class="line"></span><br><span class="line"><span class="comment">/* ===================================================================== */</span></span><br><span class="line"></span><br><span class="line">VOID <span class="constructor">Instruction(INS <span class="params">ins</span>, VOID<span class="operator">*</span> <span class="params">v</span>)</span> </span><br><span class="line">&#123; </span><br><span class="line">    ADDRINT addr = <span class="constructor">INS_Address(<span class="params">ins</span>)</span>;</span><br><span class="line">    <span class="keyword">if</span> (exe_start &lt;= addr<span class="operator"> &amp;&amp; </span>addr &lt;= exe_start + exe_size) <span class="comment">//判断指令是否在库中, 若不在, 则进行插桩</span></span><br><span class="line">        <span class="constructor">INS_InsertCall(<span class="params">ins</span>, IPOINT_BEFORE, (AFUNPTR)</span>docount, IARG_END); </span><br><span class="line">&#125;</span><br><span class="line">VOID <span class="constructor">Image(IMG <span class="params">img</span>, VOID<span class="operator">*</span> <span class="params">v</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="constructor">IMG_IsMainExecutable(<span class="params">img</span>)</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        exe_start = <span class="constructor">IMG_StartAddress(<span class="params">img</span>)</span>;</span><br><span class="line">        exe_size = <span class="constructor">IMG_SizeMapped(<span class="params">img</span>)</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* ===================================================================== */</span></span><br><span class="line"></span><br><span class="line">VOID <span class="constructor">Fini(INT32 <span class="params">code</span>, VOID<span class="operator">*</span> <span class="params">v</span>)</span> &#123; </span><br><span class="line">    cerr &lt;&lt; <span class="string">&quot;Count &quot;</span> &lt;&lt; ins_count &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; exe_start &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; exe_size + exe_start &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* ===================================================================== */</span></span><br><span class="line"><span class="comment">/* Main                                                                  */</span></span><br><span class="line"><span class="comment">/* ===================================================================== */</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">int</span> main(<span class="built_in">int</span> argc, <span class="built_in">char</span>* argv<span class="literal">[]</span>)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="constructor">PIN_Init(<span class="params">argc</span>, <span class="params">argv</span>)</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        return <span class="constructor">Usage()</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="constructor">IMG_AddInstrumentFunction(Image, 0)</span>;</span><br><span class="line">    <span class="constructor">INS_AddInstrumentFunction(Instruction, 0)</span>;</span><br><span class="line">    <span class="constructor">PIN_AddFiniFunction(Fini, 0)</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Never returns</span></span><br><span class="line">    <span class="constructor">PIN_StartProgram()</span>;</span><br><span class="line"></span><br><span class="line">    return <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* ===================================================================== */</span></span><br><span class="line"><span class="comment">/* eof */</span></span><br><span class="line"><span class="comment">/* ===================================================================== */</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h5 id="dynamorio">dynamorio</h5>
+<p>另外一款插桩工具dynamorio.这款工具的爆破其实比pin工具更快, 但是inscount.cpp的指令输出是消息框, 需要自己做一些改动.</p>
+<p>这款工具的官方给的代码是有不计算库的选项的.</p>
+<p>build官方文档:<a target="_blank" rel="noopener" href="https://dynamorio.org/page_building.html">https://dynamorio.org/page_building.html</a></p>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git clone https:<span class="string">//github.com/DynamoRIO/dynamorio.git</span></span><br><span class="line"><span class="keyword">cd</span> dynamorio &amp;&amp; mkdir build &amp;&amp; <span class="keyword">cd</span> build</span><br><span class="line">cmake -G<span class="string">&quot;Visual Studio 15&quot;</span> <span class="string">..</span> <span class="comment">#从这里指定你的VS版本, 2019为16, 2022为17 后面跟上dynamorio的源路径</span></span><br><span class="line">cmake <span class="params">--build</span> . <span class="params">--config</span> RelWithDebInfo</span><br></pre></td></tr></table></figure>
+<p>接下来直接打开build/api/samples/DynamoRIO_samples.sln就可以进行写代码编译了</p>
+<p>修改后的inscount.cpp:</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* ******************************************************************************</span></span><br><span class="line"><span class="comment"> * Copyright (c) 2014-2018 Google, Inc.  All rights reserved.</span></span><br><span class="line"><span class="comment"> * Copyright (c) 2011 Massachusetts Institute of Technology  All rights reserved.</span></span><br><span class="line"><span class="comment"> * Copyright (c) 2008 VMware, Inc.  All rights reserved.</span></span><br><span class="line"><span class="comment"> * ******************************************************************************/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * Redistribution and use in source and binary forms, with or without</span></span><br><span class="line"><span class="comment"> * modification, are permitted provided that the following conditions are met:</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * * Redistributions of source code must retain the above copyright notice,</span></span><br><span class="line"><span class="comment"> *   this list of conditions and the following disclaimer.</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * * Redistributions in binary form must reproduce the above copyright notice,</span></span><br><span class="line"><span class="comment"> *   this list of conditions and the following disclaimer in the documentation</span></span><br><span class="line"><span class="comment"> *   and/or other materials provided with the distribution.</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * * Neither the name of VMware, Inc. nor the names of its contributors may be</span></span><br><span class="line"><span class="comment"> *   used to endorse or promote products derived from this software without</span></span><br><span class="line"><span class="comment"> *   specific prior written permission.</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot;</span></span><br><span class="line"><span class="comment"> * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE</span></span><br><span class="line"><span class="comment"> * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE</span></span><br><span class="line"><span class="comment"> * ARE DISCLAIMED. IN NO EVENT SHALL VMWARE, INC. OR CONTRIBUTORS BE LIABLE</span></span><br><span class="line"><span class="comment"> * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL</span></span><br><span class="line"><span class="comment"> * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR</span></span><br><span class="line"><span class="comment"> * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER</span></span><br><span class="line"><span class="comment"> * CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT</span></span><br><span class="line"><span class="comment"> * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY</span></span><br><span class="line"><span class="comment"> * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH</span></span><br><span class="line"><span class="comment"> * DAMAGE.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* Code Manipulation API Sample:</span></span><br><span class="line"><span class="comment"> * inscount.cpp</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * Reports the dynamic count of the total number of instructions executed.</span></span><br><span class="line"><span class="comment"> * Illustrates how to perform performant clean calls.</span></span><br><span class="line"><span class="comment"> * Demonstrates effect of clean call optimization and auto-inlining with</span></span><br><span class="line"><span class="comment"> * different -opt_cleancall values.</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * The runtime options for this client include:</span></span><br><span class="line"><span class="comment"> *   -only_from_app  Do not count instructions in shared libraries.</span></span><br><span class="line"><span class="comment"> * The options are handled using the droption extension.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&quot;dr_api.h&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&quot;drmgr.h&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&quot;droption.h&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> WINDOWS</span></span><br><span class="line"><span class="meta">#    <span class="meta-keyword">define</span> DISPLAY_STRING(msg) dr_messagebox(msg)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">else</span></span></span><br><span class="line"><span class="meta">#    <span class="meta-keyword">define</span> DISPLAY_STRING(msg) dr_printf(<span class="meta-string">&quot;%s\n&quot;</span>, msg);</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> NULL_TERMINATE(buf) (buf)[(sizeof((buf)) / sizeof((buf)[0])) - 1] = <span class="meta-string">&#x27;\0&#x27;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">droption_t</span>&lt;<span class="keyword">bool</span>&gt; <span class="title">only_from_app</span><span class="params">(</span></span></span><br><span class="line"><span class="function"><span class="params">    DROPTION_SCOPE_CLIENT, <span class="string">&quot;only_from_app&quot;</span>, <span class="literal">false</span>,</span></span></span><br><span class="line"><span class="function"><span class="params">    <span class="string">&quot;Only count app, not lib, instructions&quot;</span>,</span></span></span><br><span class="line"><span class="function"><span class="params">    <span class="string">&quot;Count only instructions in the application itself, ignoring instructions in &quot;</span></span></span></span><br><span class="line"><span class="function"><span class="params">    <span class="string">&quot;shared libraries.&quot;</span>)</span></span>; <span class="comment">//把选项加上only_from_app就可以不进行库的计数</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* Application module */</span></span><br><span class="line"><span class="keyword">static</span> app_pc exe_start;</span><br><span class="line"><span class="comment">/* we only have a global count */</span></span><br><span class="line"><span class="keyword">static</span> uint64 global_count;</span><br><span class="line"><span class="comment">/* A simple clean call that will be automatically inlined because it has only</span></span><br><span class="line"><span class="comment"> * one argument and contains no calls to other functions.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">static</span> <span class="keyword">void</span></span><br><span class="line"><span class="built_in">inscount</span>(uint num_instrs)</span><br><span class="line">&#123;</span><br><span class="line">    global_count += num_instrs;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">static</span> <span class="keyword">void</span></span><br><span class="line"><span class="built_in">event_exit</span>(<span class="keyword">void</span>);</span><br><span class="line"><span class="keyword">static</span> <span class="keyword">dr_emit_flags_t</span></span><br><span class="line"><span class="built_in">event_bb_analysis</span>(<span class="keyword">void</span> *drcontext, <span class="keyword">void</span> *tag, <span class="keyword">instrlist_t</span> *bb, <span class="keyword">bool</span> for_trace,</span><br><span class="line">                  <span class="keyword">bool</span> translating, <span class="keyword">void</span> **user_data);</span><br><span class="line"><span class="keyword">static</span> <span class="keyword">dr_emit_flags_t</span></span><br><span class="line"><span class="built_in">event_app_instruction</span>(<span class="keyword">void</span> *drcontext, <span class="keyword">void</span> *tag, <span class="keyword">instrlist_t</span> *bb, <span class="keyword">instr_t</span> *inst,</span><br><span class="line">                      <span class="keyword">bool</span> for_trace, <span class="keyword">bool</span> translating, <span class="keyword">void</span> *user_data);</span><br><span class="line"></span><br><span class="line">DR_EXPORT <span class="keyword">void</span></span><br><span class="line"><span class="built_in">dr_client_main</span>(<span class="keyword">client_id_t</span> id, <span class="keyword">int</span> argc, <span class="keyword">const</span> <span class="keyword">char</span> *argv[])</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">dr_set_client_name</span>(<span class="string">&quot;DynamoRIO Sample Client &#x27;inscount&#x27;&quot;</span>,</span><br><span class="line">                       <span class="string">&quot;http://dynamorio.org/issues&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* Options */</span></span><br><span class="line">    <span class="keyword">if</span> (!<span class="keyword">droption_parser_t</span>::<span class="built_in">parse_argv</span>(DROPTION_SCOPE_CLIENT, argc, argv, <span class="literal">NULL</span>, <span class="literal">NULL</span>))</span><br><span class="line">        <span class="built_in">DR_ASSERT</span>(<span class="literal">false</span>);</span><br><span class="line">    <span class="built_in">drmgr_init</span>();</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* Get main module address */</span></span><br><span class="line">    <span class="keyword">if</span> (only_from_app.<span class="built_in">get_value</span>()) &#123;</span><br><span class="line">        <span class="keyword">module_data_t</span> *exe = <span class="built_in">dr_get_main_module</span>();</span><br><span class="line">        <span class="keyword">if</span> (exe != <span class="literal">NULL</span>)</span><br><span class="line">            exe_start = exe-&gt;start;</span><br><span class="line">        <span class="built_in">dr_free_module_data</span>(exe);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* register events */</span></span><br><span class="line">    <span class="built_in">dr_register_exit_event</span>(event_exit);</span><br><span class="line">    <span class="built_in">drmgr_register_bb_instrumentation_event</span>(event_bb_analysis, event_app_instruction,</span><br><span class="line">                                            <span class="literal">NULL</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* make it easy to tell, by looking at log file, which client executed */</span></span><br><span class="line">    <span class="built_in">dr_log</span>(<span class="literal">NULL</span>, DR_LOG_ALL, <span class="number">1</span>, <span class="string">&quot;Client &#x27;inscount&#x27; initializing\n&quot;</span>);</span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> SHOW_RESULTS</span></span><br><span class="line">    <span class="comment">/* also give notification to stderr */</span></span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">dr_is_notify_on</span>()) &#123;</span><br><span class="line"><span class="meta">#    <span class="meta-keyword">ifdef</span> WINDOWS</span></span><br><span class="line">        <span class="comment">/* ask for best-effort printing to cmd window.  must be called at init. */</span></span><br><span class="line">        <span class="built_in">dr_enable_console_printing</span>();</span><br><span class="line"><span class="meta">#    <span class="meta-keyword">endif</span></span></span><br><span class="line">        <span class="built_in">dr_fprintf</span>(STDERR, <span class="string">&quot;Client inscount is running\n&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">static</span> <span class="keyword">void</span></span><br><span class="line"><span class="built_in">event_exit</span>(<span class="keyword">void</span>)</span><br><span class="line">&#123;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> SHOW_RESULTS</span></span><br><span class="line">    <span class="keyword">char</span> msg[<span class="number">512</span>];</span><br><span class="line">    <span class="keyword">int</span> len;</span><br><span class="line">    len = <span class="built_in">dr_snprintf</span>(msg, <span class="built_in"><span class="keyword">sizeof</span></span>(msg) / <span class="built_in"><span class="keyword">sizeof</span></span>(msg[<span class="number">0</span>]),</span><br><span class="line">                      <span class="string">&quot;Instrumentation results: %llu instructions executed\n&quot;</span>,</span><br><span class="line">                      global_count);</span><br><span class="line">    <span class="built_in">DR_ASSERT</span>(len &gt; <span class="number">0</span>);</span><br><span class="line">    <span class="built_in">NULL_TERMINATE</span>(msg);</span><br><span class="line">    <span class="comment">//DISPLAY_STRING(msg);   //这里是messagebox 把这个数据时间控制台输出就行了</span></span><br><span class="line">    std::cout &lt;&lt; msg &lt;&lt; std::endl;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span> <span class="comment">/* SHOW_RESULTS */</span></span></span><br><span class="line">    <span class="built_in">drmgr_exit</span>();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">static</span> <span class="keyword">dr_emit_flags_t</span></span><br><span class="line"><span class="built_in">event_bb_analysis</span>(<span class="keyword">void</span> *drcontext, <span class="keyword">void</span> *tag, <span class="keyword">instrlist_t</span> *bb, <span class="keyword">bool</span> for_trace,</span><br><span class="line">                  <span class="keyword">bool</span> translating, <span class="keyword">void</span> **user_data)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">instr_t</span> *instr;</span><br><span class="line">    uint num_instrs;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> VERBOSE</span></span><br><span class="line">    <span class="built_in">dr_printf</span>(<span class="string">&quot;in dynamorio_basic_block(tag=&quot;</span> PFX <span class="string">&quot;)\n&quot;</span>, tag);</span><br><span class="line"><span class="meta">#    <span class="meta-keyword">ifdef</span> VERBOSE_VERBOSE</span></span><br><span class="line">    <span class="built_in">instrlist_disassemble</span>(drcontext, tag, bb, STDOUT);</span><br><span class="line"><span class="meta">#    <span class="meta-keyword">endif</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br><span class="line">    <span class="comment">/* Only count in app BBs */</span></span><br><span class="line">    <span class="keyword">if</span> (only_from_app.<span class="built_in">get_value</span>()) &#123;</span><br><span class="line">        <span class="keyword">module_data_t</span> *mod = <span class="built_in">dr_lookup_module</span>(<span class="built_in">dr_fragment_app_pc</span>(tag));</span><br><span class="line">        <span class="keyword">if</span> (mod != <span class="literal">NULL</span>) &#123;</span><br><span class="line">            <span class="keyword">bool</span> from_exe = (mod-&gt;start == exe_start);</span><br><span class="line">            <span class="built_in">dr_free_module_data</span>(mod);</span><br><span class="line">            <span class="keyword">if</span> (!from_exe) &#123;</span><br><span class="line">                *user_data = <span class="literal">NULL</span>;</span><br><span class="line">                <span class="keyword">return</span> DR_EMIT_DEFAULT;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* Count instructions. If an emulation client is running with this client,</span></span><br><span class="line"><span class="comment">     * we want to count all the original native instructions and the emulated</span></span><br><span class="line"><span class="comment">     * instruction but NOT the introduced native instructions used for emulation.</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">bool</span> is_emulation = <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">for</span> (instr = <span class="built_in">instrlist_first</span>(bb), num_instrs = <span class="number">0</span>; instr != <span class="literal">NULL</span>;</span><br><span class="line">         instr = <span class="built_in">instr_get_next</span>(instr)) &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">drmgr_is_emulation_start</span>(instr)) &#123;</span><br><span class="line">            <span class="comment">/* Each emulated instruction is replaced by a series of native</span></span><br><span class="line"><span class="comment">             * instructions delimited by labels indicating when the emulation</span></span><br><span class="line"><span class="comment">             * sequence begins and ends. It is the responsibility of the</span></span><br><span class="line"><span class="comment">             * emulation client to place the start/stop labels correctly.</span></span><br><span class="line"><span class="comment">             */</span></span><br><span class="line">            num_instrs++;</span><br><span class="line">            is_emulation = <span class="literal">true</span>;</span><br><span class="line">            <span class="comment">/* Data about the emulated instruction can be extracted from the</span></span><br><span class="line"><span class="comment">             * start label using the accessor function:</span></span><br><span class="line"><span class="comment">             * drmgr_get_emulated_instr_data()</span></span><br><span class="line"><span class="comment">             */</span></span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">drmgr_is_emulation_end</span>(instr)) &#123;</span><br><span class="line">            is_emulation = <span class="literal">false</span>;</span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (is_emulation)</span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">        <span class="keyword">if</span> (!<span class="built_in">instr_is_app</span>(instr))</span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">        num_instrs++;</span><br><span class="line">    &#125;</span><br><span class="line">    *user_data = (<span class="keyword">void</span> *)(<span class="keyword">ptr_uint_t</span>)num_instrs;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">if</span> defined(VERBOSE) &amp;&amp; defined(VERBOSE_VERBOSE)</span></span><br><span class="line">    <span class="built_in">dr_printf</span>(<span class="string">&quot;Finished counting for dynamorio_basic_block(tag=&quot;</span> PFX <span class="string">&quot;)\n&quot;</span>, tag);</span><br><span class="line">    <span class="built_in">instrlist_disassemble</span>(drcontext, tag, bb, STDOUT);</span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br><span class="line">    <span class="keyword">return</span> DR_EMIT_DEFAULT;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">static</span> <span class="keyword">dr_emit_flags_t</span></span><br><span class="line"><span class="built_in">event_app_instruction</span>(<span class="keyword">void</span> *drcontext, <span class="keyword">void</span> *tag, <span class="keyword">instrlist_t</span> *bb, <span class="keyword">instr_t</span> *instr,</span><br><span class="line">                      <span class="keyword">bool</span> for_trace, <span class="keyword">bool</span> translating, <span class="keyword">void</span> *user_data)</span><br><span class="line">&#123;</span><br><span class="line">    uint num_instrs;</span><br><span class="line">    <span class="comment">/* By default drmgr enables auto-predication, which predicates all instructions with</span></span><br><span class="line"><span class="comment">     * the predicate of the current instruction on ARM.</span></span><br><span class="line"><span class="comment">     * We disable it here because we want to unconditionally execute the following</span></span><br><span class="line"><span class="comment">     * instrumentation.</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="built_in">drmgr_disable_auto_predication</span>(drcontext, bb);</span><br><span class="line">    <span class="keyword">if</span> (!<span class="built_in">drmgr_is_first_instr</span>(drcontext, instr))</span><br><span class="line">        <span class="keyword">return</span> DR_EMIT_DEFAULT;</span><br><span class="line">    <span class="comment">/* Only insert calls for in-app BBs */</span></span><br><span class="line">    <span class="keyword">if</span> (user_data == <span class="literal">NULL</span>)</span><br><span class="line">        <span class="keyword">return</span> DR_EMIT_DEFAULT;</span><br><span class="line">    <span class="comment">/* Insert clean call */</span></span><br><span class="line">    num_instrs = (uint)(<span class="keyword">ptr_uint_t</span>)user_data;</span><br><span class="line">    <span class="built_in">dr_insert_clean_call</span>(drcontext, bb, <span class="built_in">instrlist_first_app</span>(bb), (<span class="keyword">void</span> *)inscount,</span><br><span class="line">                         <span class="literal">false</span> <span class="comment">/* save fpstate */</span>, <span class="number">1</span>, <span class="built_in">OPND_CREATE_INT32</span>(num_instrs));</span><br><span class="line">    <span class="keyword">return</span> DR_EMIT_DEFAULT;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="使用python-winpwn进行爆破">使用python winpwn进行爆破</h4>
+<p>这里可以用C++ 的windows api来进行爆破, 使用重定向输入和输出创建子进程.</p>
+<p>微软的官方文档里面相应的样例代码:</p>
+<p><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/windows/win32/procthread/creating-a-child-process-with-redirected-input-and-output">https://docs.microsoft.com/zh-cn/windows/win32/procthread/creating-a-child-process-with-redirected-input-and-output</a></p>
+<p>我使用的是winpwn这个工具来进行爆破, 我稍微看了一下程序创建过程, 本质上还是python去调用windows api, 和C++调用windows API大致一样</p>
+<p>爆破脚本:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">from</span> winpwn import *</span><br><span class="line">import threading</span><br><span class="line"><span class="selector-tag">from</span> concurrent<span class="selector-class">.futures</span> import ThreadPoolExecutor, Future</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def test(data):</span><br><span class="line">    tmp = data</span><br><span class="line">    cmd = <span class="string">&#x27;&#x27;</span> #your pin.exe path</span><br><span class="line">    module = <span class="string">&#x27;&#x27;</span> #your pintool.dll path</span><br><span class="line">    p = <span class="built_in">process</span>([cmd, <span class="string">&#x27;-t&#x27;</span>, module, <span class="string">&#x27;--&#x27;</span>, <span class="string">&#x27;.\\low_re.exe&#x27;</span>])</span><br><span class="line">    #p = <span class="built_in">process</span>([cmd, <span class="string">&#x27;-c&#x27;</span>, module, <span class="string">&#x27;-only_from_app&#x27;</span>, <span class="string">&#x27;--&#x27;</span>, <span class="string">&#x27;.\\low_re.exe&#x27;</span>]) //dynamorio的命令行</span><br><span class="line">    p.<span class="built_in">recvline</span>()</span><br><span class="line">    p.<span class="built_in">recvline</span>()</span><br><span class="line">    p.<span class="built_in">sendline</span>(data)</span><br><span class="line">    data = p.<span class="built_in">recvuntil</span>(<span class="string">&quot;\n&quot;</span>)</span><br><span class="line">    if (data[<span class="number">0</span>:<span class="number">5</span>] != <span class="string">&quot;Count&quot;</span>):</span><br><span class="line">        data = p.<span class="built_in">recvuntil</span>(<span class="string">&quot;\n&quot;</span>)</span><br><span class="line">    data = <span class="built_in">int</span>(data.<span class="built_in">split</span>(<span class="string">&quot;Count &quot;</span>)[<span class="number">1</span>].<span class="built_in">split</span>(<span class="string">&quot; &quot;</span>)[<span class="number">0</span>])</span><br><span class="line">    #if (data[<span class="number">0</span>:<span class="number">5</span>] != <span class="string">&quot;Instr&quot;</span>): //dynamorio的输出</span><br><span class="line">        #data = p.<span class="built_in">recvuntil</span>(<span class="string">&quot;\n&quot;</span>)</span><br><span class="line">    #data = <span class="built_in">int</span>(re.<span class="built_in">findall</span>(<span class="string">&#x27;\d+&#x27;</span>, data)[<span class="number">0</span>])</span><br><span class="line">    p.<span class="built_in">close</span>()</span><br><span class="line">    return data</span><br><span class="line"></span><br><span class="line">pool = <span class="built_in">ThreadPoolExecutor</span>(<span class="number">8</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">testlen = <span class="number">17</span></span><br><span class="line"></span><br><span class="line">if (testlen):</span><br><span class="line">    flag = <span class="string">&quot;&quot;</span></span><br><span class="line">    while <span class="built_in">len</span>(flag) != testlen:</span><br><span class="line">        tasks = []</span><br><span class="line">        results = []</span><br><span class="line">        for i in <span class="built_in">range</span>(<span class="number">32</span>, <span class="number">0</span>x7f):</span><br><span class="line">            data = flag + <span class="built_in">chr</span>(i) + <span class="string">&#x27;i&#x27;</span> * (testlen - <span class="number">1</span> - <span class="built_in">len</span>(flag))</span><br><span class="line">            tasks.<span class="built_in">append</span>(pool.<span class="built_in">submit</span>(test, data))</span><br><span class="line">        for t in tasks:</span><br><span class="line">            results.<span class="built_in">append</span>(t.<span class="built_in">result</span>())</span><br><span class="line">        #<span class="built_in">print</span>(<span class="built_in">chr</span>(a.<span class="built_in">index</span>(<span class="built_in">max</span>(a)) + <span class="number">32</span>))</span><br><span class="line">        flag += <span class="built_in">chr</span>(results.<span class="built_in">index</span>(<span class="built_in">max</span>(results)) + <span class="number">32</span>)</span><br><span class="line">        <span class="built_in">print</span>(flag)</span><br><span class="line">else:</span><br><span class="line">    i = <span class="number">1</span></span><br><span class="line">    a = []</span><br><span class="line">    while i &lt; <span class="number">64</span>:</span><br><span class="line">        a.<span class="built_in">append</span>(<span class="built_in">test</span>(i * <span class="string">&#x27;1&#x27;</span>))</span><br><span class="line">        i += <span class="number">1</span></span><br><span class="line">    <span class="built_in">print</span>(a.<span class="built_in">index</span>(<span class="built_in">max</span>(a)) + <span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+<p>这里值得注意的是, 最后输出的Count xxx 是输出到错误信息里面的, 并且是以’\n’结尾所以不能直接使用recvline().</p>
+<p>winpwn部分源代码:</p>
+<figure class="highlight haxe"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">def recvline(self,timeout=None,<span class="keyword">new</span><span class="type">line</span>=None):<span class="type"></span></span><br><span class="line"><span class="type">        if newline is None</span>:</span><br><span class="line">            <span class="keyword">new</span><span class="type">line</span>=context.<span class="keyword">new</span><span class="type">line</span> <span class="meta">#newline=&#x27;\r\n&#x27; </span></span><br><span class="line">        <span class="keyword">return</span> self.recvuntil(<span class="keyword">new</span><span class="type">line</span>)</span><br></pre></td></tr></table></figure>
+<p><a target="_blank" rel="noopener" href="http://xn--winpwnwin-bc7nv315ablrc.py">winpwn调用了win.py</a></p>
+<p>write相关调用:</p>
+<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">def write(self,buf=&#x27;&#x27;):</span><br><span class="line">        buf=<span class="constructor">Latin1_encode(<span class="params">buf</span>)</span></span><br><span class="line">        length=len(buf)</span><br><span class="line">        written=wintypes.<span class="constructor">DWORD()</span></span><br><span class="line">        x=windll.kernel32.<span class="constructor">WriteFile(<span class="params">self</span>.<span class="params">hWritePipe</span>,<span class="params">buf</span>,<span class="params">length</span>,<span class="params">byref</span>(<span class="params">written</span>)</span>,None) <span class="comment">//这个就是windows api了</span></span><br><span class="line">        <span class="keyword">if</span> x==<span class="number">0</span>:</span><br><span class="line">            raise(<span class="constructor">EOFError()</span>)</span><br><span class="line">        return written.value</span><br></pre></td></tr></table></figure>
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/cn/d3ctf/" data-toggle="tooltip" data-placement="top" title="d3ctf">&larr; Previous Post</a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/cn/l3hctf-part-wp/" data-toggle="tooltip" data-placement="top" title="l3hctf_part_wp">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      如果您喜欢此博客或发现它对您有用，则欢迎对此发表评论。 也欢迎您共享此博客，以便更多人可以参与。 如果博客中使用的图像侵犯了您的版权，请与作者联系以将其删除。 谢谢 ！
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=SCTF low_re&body=Hi,I found this website and thought you might like it http://yoursite-url/cn/SCTF-low-re/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <!-- <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.js"></script> -->
+    <script src="/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: '',
+      clientSecret: '',
+      repo: '',
+      owner: '',
+      admin: '',
+      id: 'Tue Jan 04 2022 20:10:13 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'en',
+      proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>链友</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="https://v-vincen.life/" target="_blank">V_Vincen</a>
+          </li>
+          
+          <li>
+            <a href="http://beantech.org" target="_blank">Bean Tech</a>
+          </li>
+          
+          <li>
+            <a href="http://huangxuan.me" target="_blank">Hux Blog</a>
+          </li>
+          
+          <li>
+            <a href="https://hexo.io/" target="_blank">Hexo</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+            <li>
+              <a target="_blank" href="https://github.com/yimianweishi">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          marginal
+          2023
+          <br>
+          Theme by
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
+          <span style="display: inline-block; margin: 0 5px;">
+            <i class="fa fa-heart"></i>
+          </span>
+          re-Ported by
+          <a target="_blank" rel="noopener" href="https://v-vincen.life/">Live My Life</a>
+          |
+          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="/js/jquery.min.js"></script>
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="/js/hux-blog.min.js"></script>
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="/js/catalog.js"></script>
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script async="async" type="text/javascript" src="/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("http://yoursite-url/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="搜索..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+            
+
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>
