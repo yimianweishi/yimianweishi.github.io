@@ -193,7 +193,7 @@
 
   <url>
     <loc>http://yoursite-url/</loc>
-    <lastmod>2023-06-27</lastmod>
+    <lastmod>2023-06-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -201,42 +201,42 @@
   
   <url>
     <loc>http://yoursite-url/tags/re-android/</loc>
-    <lastmod>2023-06-27</lastmod>
+    <lastmod>2023-06-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yoursite-url/tags/re-android-%E8%84%B1%E5%A3%B3/</loc>
-    <lastmod>2023-06-27</lastmod>
+    <lastmod>2023-06-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yoursite-url/tags/CTF-reverse/</loc>
-    <lastmod>2023-06-27</lastmod>
+    <lastmod>2023-06-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yoursite-url/tags/CTF-reverse/</loc>
-    <lastmod>2023-06-27</lastmod>
+    <lastmod>2023-06-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yoursite-url/tags/pwn-ctf/</loc>
-    <lastmod>2023-06-27</lastmod>
+    <lastmod>2023-06-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yoursite-url/tags/re-windows/</loc>
-    <lastmod>2023-06-27</lastmod>
+    <lastmod>2023-06-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -245,14 +245,14 @@
   
   <url>
     <loc>http://yoursite-url/categories/reverse/</loc>
-    <lastmod>2023-06-27</lastmod>
+    <lastmod>2023-06-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yoursite-url/categories/pwn/</loc>
-    <lastmod>2023-06-27</lastmod>
+    <lastmod>2023-06-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>

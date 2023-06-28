@@ -475,22 +475,22 @@
 <p>参见<a target="_blank" rel="noopener" href="https://partner.steamgames.com/doc/features/drm#other_drm">使用 Steam 包装器包装其他 DRM</a>，了解同时使用 Steam DRM 包装器与其他 DRM 或反篡改方案的更多信息。</p>
 <h3 id="去除">去除</h3>
 <p>我们可以看到节区多了一个.bind节区:</p>
-<p><img src="%E4%B8%80%E6%AC%A1%E7%AE%80%E5%8D%95steam%E7%89%88%E6%9D%83%E4%BF%9D%E6%8A%A4%E7%A7%BB%E9%99%A4/image-20220429010009492.png" alt="image-20220429010009492"></p>
+<p><img src="image-20220429010009492.png" alt="image-20220429010009492"></p>
 <p>如果要手脱壳, 具体去除的细节就是和脱壳类似, 因为后面有专门的工具就不一一赘述了. 具体细节可以参考这个国外的师傅去除32位的过程录的视频</p>
 <p><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=yrrcL8xGPoE">https://www.youtube.com/watch?v=yrrcL8xGPoE</a></p>
 <h3 id="steamless">steamless</h3>
 <p>这是一款专门去除steam 包装器的工具, 可以在github上面找到他</p>
 <p><a target="_blank" rel="noopener" href="https://github.com/atom0s/Steamless">https://github.com/atom0s/Steamless</a></p>
 <p>用这款工具跑一下这个入口exe, 发现.bind节区消失了</p>
-<p><img src="%E4%B8%80%E6%AC%A1%E7%AE%80%E5%8D%95steam%E7%89%88%E6%9D%83%E4%BF%9D%E6%8A%A4%E7%A7%BB%E9%99%A4/image-20220429010718750.png" alt="image-20220429010718750"></p>
+<p><img src="image-20220429010718750.png" alt="image-20220429010718750"></p>
 <p>我们可以很容易的发现winMain函数</p>
-<p><img src="%E4%B8%80%E6%AC%A1%E7%AE%80%E5%8D%95steam%E7%89%88%E6%9D%83%E4%BF%9D%E6%8A%A4%E7%A7%BB%E9%99%A4/image-20220429010740770.png" alt="image-20220429010740770"></p>
+<p><img src="image-20220429010740770.png" alt="image-20220429010740770"></p>
 <p>直接跳到了UnityMain.</p>
 <h2 id="steam-api">steam api</h2>
 <p>上面仅仅只是去除了一个壳, 准确的来说是一个包装器. 下面我们得去除用户代码所包含的验证.</p>
 <p>用dnspy打开Assembly-CSharp.dll, 通过符号可以找到steam相关的steamtool类和steammanger类.</p>
 <p>把Assembly-CSharp.dll拖进ida中, 对这两个类进行分析.</p>
-<p><img src="%E4%B8%80%E6%AC%A1%E7%AE%80%E5%8D%95steam%E7%89%88%E6%9D%83%E4%BF%9D%E6%8A%A4%E7%A7%BB%E9%99%A4/image-20220510002438686.png" alt="image-20220510002438686"></p>
+<p><img src="image-20220510002438686.png" alt="image-20220510002438686"></p>
 <p>Unity中的脚本都是继承自MonoBehaviour.</p>
 <p>这其中有一些基本回调函数:</p>
 <p>Awake：在加载脚本实例时调用 Awake。</p>
@@ -507,25 +507,25 @@
 <p>应该调用的第二个 Steamworks 函数是 to <code>SteamAPI.Init()</code>，这将启动 SteamAPI，并且必须在调用任何其他 Steamworks 函数之前调用。</p>
 <p>因为steamAPI都没有执行, 所以我们有些关于获取steam信息的配置需要我们自己手动设置.</p>
 <p>SteamTool__Update:</p>
-<p><img src="%E4%B8%80%E6%AC%A1%E7%AE%80%E5%8D%95steam%E7%89%88%E6%9D%83%E4%BF%9D%E6%8A%A4%E7%A7%BB%E9%99%A4/image-20220512161005542.png" alt="image-20220512161005542"></p>
-<p><img src="%E4%B8%80%E6%AC%A1%E7%AE%80%E5%8D%95steam%E7%89%88%E6%9D%83%E4%BF%9D%E6%8A%A4%E7%A7%BB%E9%99%A4/image-20220512161044291.png" alt="image-20220512161044291"></p>
+<p><img src="image-20220512161005542.png" alt="image-20220512161005542"></p>
+<p><img src="image-20220512161044291.png" alt="image-20220512161044291"></p>
 <p>这里的CurLanguage对应的设置就是语言配置, 目前好像只支持中英文.</p>
-<p>我们直接跳到LABEL_55对应的汇编处, 就可以将CurLanguage属性设置为1以及isUpdate设置为0, 而开头有一个判断为<img src="%E4%B8%80%E6%AC%A1%E7%AE%80%E5%8D%95steam%E7%89%88%E6%9D%83%E4%BF%9D%E6%8A%A4%E7%A7%BB%E9%99%A4/image-20220512161414652.png" alt="image-20220512161414652"></p>
+<p>我们直接跳到LABEL_55对应的汇编处, 就可以将CurLanguage属性设置为1以及isUpdate设置为0, 而开头有一个判断为<img src="image-20220512161414652.png" alt="image-20220512161414652"></p>
 <p>如果isUpdate设置为0, 就不会进入获取语言配置的代码块.</p>
 <p>在patch进入游戏后, 会有明显提示&quot;重新下载最新包&quot;, 应该是某些steam配置没有找到.</p>
-<p><img src="%E4%B8%80%E6%AC%A1%E7%AE%80%E5%8D%95steam%E7%89%88%E6%9D%83%E4%BF%9D%E6%8A%A4%E7%A7%BB%E9%99%A4/image-20220512171248323.png" alt="image-20220512171248323"></p>
+<p><img src="image-20220512171248323.png" alt="image-20220512171248323"></p>
 <p>根据字符串可以定位到关键地方</p>
-<p><img src="%E4%B8%80%E6%AC%A1%E7%AE%80%E5%8D%95steam%E7%89%88%E6%9D%83%E4%BF%9D%E6%8A%A4%E7%A7%BB%E9%99%A4/image-20220512164229527.png" alt="image-20220512164229527"></p>
+<p><img src="image-20220512164229527.png" alt="image-20220512164229527"></p>
 <p>找到对应的类, 我们可以看到设置相应回调函数的地方</p>
 <p>MenuPanel__InclusionFailure</p>
-<p><img src="%E4%B8%80%E6%AC%A1%E7%AE%80%E5%8D%95steam%E7%89%88%E6%9D%83%E4%BF%9D%E6%8A%A4%E7%A7%BB%E9%99%A4/image-20220512164508074.png" alt="image-20220512164508074"></p>
+<p><img src="image-20220512164508074.png" alt="image-20220512164508074"></p>
 <p>MenuPanel__ShowPanel</p>
-<p><img src="%E4%B8%80%E6%AC%A1%E7%AE%80%E5%8D%95steam%E7%89%88%E6%9D%83%E4%BF%9D%E6%8A%A4%E7%A7%BB%E9%99%A4/image-20220515170853538.png" alt="image-20220515170853538"></p>
+<p><img src="image-20220515170853538.png" alt="image-20220515170853538"></p>
 <p>这个应该是判断期限的意思, 这里直接修改控制流就可以直接正常运行了.</p>
 <h3 id="APIhook">APIhook</h3>
 <p>上面讲的直接更改程序逻辑的方式虽然非常简单, 但是通用性不高(<s>其实是没大哥帮我造轮子</s>. 而采取APIhook, 也就是替换掉dll的方式, 可以绕过更多的游戏, 并且移植简单.</p>
 <p>steam_api.dll的生成可以参考https://gitlab.com/Mr_Goldberg/goldberg_emulator这个项目</p>
-<p><img src="%E4%B8%80%E6%AC%A1%E7%AE%80%E5%8D%95steam%E7%89%88%E6%9D%83%E4%BF%9D%E6%8A%A4%E7%A7%BB%E9%99%A4/image-20220515012921314.png" alt="image-20220515012921314"></p>
+<p><img src="image-20220515012921314.png" alt="image-20220515012921314"></p>
 <p>这个项目可以编译出我们需要的DLL(这个构建雀氏有点折腾人), 但是仍然有一些steam信息配置的API需要我们自己做一些修改, 比如:</p>
 <p><code>Steamworks_NativeMethods__ISteamUtils_GetSteamUILanguage</code></p>
 <p>根据前面的分析, 我们需要让他返回&quot;schinese&quot;.</p>
@@ -533,11 +533,11 @@
 <p>flat.cpp:</p>
 <figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">STEAMAPI_API <span class="keyword">const</span> char * SteamAPI_ISteamUtils_GetSteamUILanguage( ISteamUtils* self )</span><br><span class="line">&#123;</span><br><span class="line">    long long <span class="function"><span class="title">test1</span> = <span class="params">((char *)self - (char*)get_steam_client()-&gt;steam_utils)</span>;</span></span><br><span class="line"><span class="function">    <span class="title">long</span> <span class="title">long</span> <span class="title">test2</span> = <span class="params">((char *)self - (char*)get_steam_client()-&gt;steam_gameserver_utils)</span>;</span></span><br><span class="line"><span class="function">    <span class="title">auto</span> <span class="title">ptr</span> = <span class="title">get_steam_client</span><span class="params">()</span>-&gt;</span>steam_gameserver_utils;</span><br><span class="line">    <span class="keyword">if</span> (test1 &gt;= <span class="number">0</span> &amp;&amp; (test2 &lt; <span class="number">0</span> || test1 &lt; test2)) &#123;</span><br><span class="line">        ptr = get_steam_client<span class="function"><span class="params">()</span>-&gt;</span>steam_utils;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;schinese&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>完成dll编译之后替换掉原来的dll就可以进入游戏界面</p>
-<p><img src="%E4%B8%80%E6%AC%A1%E7%AE%80%E5%8D%95steam%E7%89%88%E6%9D%83%E4%BF%9D%E6%8A%A4%E7%A7%BB%E9%99%A4/image-20220515175036523.png" alt="image-20220515175036523"></p>
+<p><img src="image-20220515175036523.png" alt="image-20220515175036523"></p>
 <p>之前的期限检查貌似和steam api无关, 所以这里不多说了(打过硬件断点去回溯写入地址, 但是居然断到了unityplayer.dll里面, 而api moitoring中检测不到unityplayer.dll调用steam api.</p>
 <h3 id="api-moitoring">api moitoring</h3>
 <p>这里推荐一下一个API检测工具: api moitoring, 这个工具可以监控特定dll中的api调用情况, 这样我们就可以知道这个程序用了那些steamapi了, 再根据自己的需求更改相应的api再编译就可以了.</p>
-<p><img src="%E4%B8%80%E6%AC%A1%E7%AE%80%E5%8D%95steam%E7%89%88%E6%9D%83%E4%BF%9D%E6%8A%A4%E7%A7%BB%E9%99%A4/image-20220515184507487.png" alt="image-20220515184507487"></p>
+<p><img src="image-20220515184507487.png" alt="image-20220515184507487"></p>
 <h3 id="相关的文档">相关的文档</h3>
 <p><a target="_blank" rel="noopener" href="http://steamwork.net">steamwork.net</a></p>
 <p><a target="_blank" rel="noopener" href="https://steamworks.github.io/">https://steamworks.github.io/</a></p>
