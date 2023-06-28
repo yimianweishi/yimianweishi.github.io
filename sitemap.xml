@@ -221,13 +221,6 @@
   </url>
   
   <url>
-    <loc>http://yoursite-url/tags/CTF-reverse/</loc>
-    <lastmod>2023-06-28</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://yoursite-url/tags/pwn-ctf/</loc>
     <lastmod>2023-06-28</lastmod>
     <changefreq>daily</changefreq>
